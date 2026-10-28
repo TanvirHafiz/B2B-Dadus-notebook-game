@@ -1,0 +1,725 @@
+{
+  "id": "ch1",
+  "title": "Dark 65",
+  "eyebrow": "Bean-to-Bar · Chapter 1",
+  "gameTitle": "Dadu's Notebook",
+  "opening": "The notebook is on the bench. Let me try to read it.",
+  "cast": {
+    "Laila": {
+      "name": "Laila",
+      "portrait": "laila"
+    },
+    "Rafiq": {
+      "name": "Rafiq Bhai",
+      "portrait": "rafiq",
+      "side": "right"
+    },
+    "Mishti": {
+      "name": "Mishti",
+      "portrait": "mishti",
+      "side": "right"
+    },
+    "Hint": {
+      "name": "Dadu's note",
+      "portrait": "dadu"
+    }
+  },
+  "intro": [
+    {
+      "art": "shutter-closed",
+      "h": "Old Dhaka.",
+      "p": "For forty years Dadu made chocolate in the workshop behind the shutters. Since the funeral, they have stayed down."
+    },
+    {
+      "art": "shutter-open",
+      "cast": [
+        "Laila",
+        "Rafiq"
+      ],
+      "talk": [
+        [
+          "Rafiq",
+          "Laila beta! Open up, it is me, Rafiq."
+        ],
+        [
+          "Laila",
+          "Rafiq Bhai? The shop has been closed for weeks."
+        ],
+        [
+          "Rafiq",
+          "I know, I know. But it is Mishti's birthday on Tuesday, and all she wants is your Dadu's dark bar."
+        ],
+        [
+          "Rafiq",
+          "One kilo, beta. You remember how he made it, don't you?"
+        ],
+        [
+          "Laila",
+          "I never learned. But he wrote everything in the notebook."
+        ]
+      ]
+    },
+    {
+      "art": "shutter-glow",
+      "cast": [
+        "Laila"
+      ],
+      "talk": [
+        [
+          "Laila",
+          "Oh no. The roof leaked last monsoon. The pages are stained, smudged and torn."
+        ],
+        [
+          "Laila",
+          "Fine. I will work it out from whatever Dadu left behind."
+        ]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "Dark 65 chocolate · 1 kg",
+    "lines": [
+      {
+        "id": "roast",
+        "text": "{blank} the beans till the whole room smells like toasted bread. Stop before the smoke.",
+        "blank": 0,
+        "note": "medium roast",
+        "provides": {
+          "ch1.roast_role": "smell",
+          "ch1.roast_target": "toasted bread"
+        }
+      },
+      {
+        "id": "winnow",
+        "text": "{blank} them to crack the shells and blow the husk away. [[q:The husk is bitter. Give it to the pigeons.]]",
+        "blank": 1,
+        "provides": {
+          "ch1.winnow_role": "husk"
+        }
+      },
+      {
+        "id": "grind",
+        "text": "{blank} the nibs with the sugar till it pours like thick paste. Dark [[blur:sixty-five]] means that many of every hundred is cacao.",
+        "blank": 2,
+        "note": "650 g nibs + 350 g sugar",
+        "provides": {
+          "ch1.grind_role": "paste"
+        }
+      },
+      {
+        "id": "conche",
+        "text": "{blank} [[torn:…it overnight, till the sour goes smooth.]] Start when the shutters come down. Stop at the first azaan.",
+        "blank": 3,
+        "note": "11 hours",
+        "provides": {
+          "ch1.conche_role": "overnight"
+        }
+      },
+      {
+        "id": "temper",
+        "text": "{blank} Melt to the red tape. Cool to the blue. Bring it back up to the green. [[b:Never skip the cool.]]",
+        "blank": 4,
+        "note": "45 / 27 / 31 °C",
+        "provides": {
+          "ch1.temper_role": "heat-cool-heat"
+        }
+      },
+      {
+        "id": "mold",
+        "text": "Pour into the moulds. Tap the tray to knock the air out."
+      }
+    ]
+  },
+  "workshop": {
+    "scene": "assets/art/scene-ch1.webp",
+    "sceneAlt": "Dadu's chocolate workshop at dusk. Tap the glowing objects to remember.",
+    "hintLine": "Tap the glowing spots. Dadu left clues all over the workshop.",
+    "memoEyebrow": "Laila remembers"
+  },
+  "clues": [
+    {
+      "id": "apron",
+      "hotspot": {
+        "x": 3.8,
+        "y": 24.3,
+        "w": 13.5,
+        "h": 56
+      },
+      "title": "Dadu's apron",
+      "art": "apron",
+      "text": "It still smells of roasted beans. There is a wrapper in the pocket, from the very first bar he ever made.",
+      "provides": {},
+      "artText": {
+        "alt": "Dadu's apron with a wrapper in the pocket",
+        "label": "first bar"
+      }
+    },
+    {
+      "id": "jar",
+      "hotspot": {
+        "x": 23.3,
+        "y": 19.4,
+        "w": 8.3,
+        "h": 14.9
+      },
+      "title": "The sugar jar",
+      "art": "jar",
+      "text": "Dadu's sugar jar. \"Weigh it, don't guess,\" he would say, tapping the lid.",
+      "provides": {},
+      "artText": {
+        "alt": "A jar of sugar",
+        "name": "SUGAR",
+        "note": "weigh it!"
+      }
+    },
+    {
+      "id": "radio",
+      "hotspot": {
+        "x": 83.3,
+        "y": 3.7,
+        "w": 11.5,
+        "h": 20.5
+      },
+      "title": "The old radio",
+      "art": "radio",
+      "text": "He hummed along to it while the conche turned. It still works, if you hit it just right.",
+      "provides": {},
+      "artText": {
+        "alt": "An old radio"
+      }
+    },
+    {
+      "id": "therm",
+      "hotspot": {
+        "x": 82.3,
+        "y": 28,
+        "w": 5.8,
+        "h": 39.2
+      },
+      "title": "Dadu's thermometer",
+      "art": "therm",
+      "text": "Dadu stopped reading the numbers years ago. He put coloured tape where each one lived. The little tag is his reminder for the milk bars, which are a different recipe.",
+      "labels": {
+        "red": "R",
+        "blue": "B",
+        "green": "G"
+      },
+      "provides": {
+        "ch1.tape_red": 45,
+        "ch1.tape_blue": 27,
+        "ch1.tape_green": 31,
+        "ch1.milk_tag": 29
+      },
+      "artText": {
+        "alt": "Dadu's thermometer with a red tape marked {red} at 45 degrees, a blue tape marked {blue} at 27 degrees, a green tape marked {green} at 31 degrees, and a tag reading milk: 29",
+        "milkTag": "milk: 29"
+      }
+    },
+    {
+      "id": "table",
+      "hotspot": {
+        "x": 89.2,
+        "y": 31.7,
+        "w": 9.4,
+        "h": 22.4
+      },
+      "title": "The prayer timetable",
+      "art": "table",
+      "text": "He pinned the prayer times over the bench and circled the first one in pen. It was his alarm clock.",
+      "provides": {
+        "ch1.fajr_am": 5
+      },
+      "artText": {
+        "alt": "Prayer timetable with Fajr 5:00 am circled in pen",
+        "title": "Prayer times, Old Dhaka",
+        "rows": [
+          [
+            "Fajr",
+            "5:00 am"
+          ],
+          [
+            "Zuhr",
+            "12:05 pm"
+          ],
+          [
+            "Asr",
+            "3:40 pm"
+          ],
+          [
+            "Maghrib",
+            "5:25 pm"
+          ],
+          [
+            "Isha",
+            "6:45 pm"
+          ]
+        ],
+        "note": "my alarm clock!"
+      }
+    },
+    {
+      "id": "sign",
+      "hotspot": {
+        "x": 66.3,
+        "y": 6.7,
+        "w": 12.5,
+        "h": 14.2
+      },
+      "title": "The shop sign",
+      "art": "sign",
+      "text": "The shutters came down at six every evening, even on Fridays. \"Chocolate does not care about holidays,\" he used to say.",
+      "provides": {
+        "ch1.shutters_pm": 18
+      },
+      "artText": {
+        "alt": "A hanging shop sign: open 9 am to 6 pm, shutters down at six sharp",
+        "top": "খোলা",
+        "open": "OPEN 9 am to 6 pm",
+        "shutters": "Shutters down at six, sharp.",
+        "openSize": "24"
+      }
+    },
+    {
+      "id": "slip",
+      "hotspot": {
+        "x": 65,
+        "y": 72.8,
+        "w": 9.4,
+        "h": 9.3
+      },
+      "title": "Rafiq Bhai's order",
+      "art": "slip",
+      "text": "Still on the spike. Dark 65, one kilo, for his daughter's birthday on Tuesday.",
+      "provides": {
+        "ch1.batch_g": 1000,
+        "ch1.cacao_pct": 65
+      },
+      "artText": {
+        "alt": "An order slip for Rafiq Bhai, Dark 65, 1 kg",
+        "l1": "Rafiq Bhai (corner shop)",
+        "l2": "Dark 65 bar",
+        "l3": "1 kg",
+        "l4": "for Mishti's birthday, Tuesday"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "order",
+      "type": "order",
+      "title": "Rebuild the line",
+      "prompt": "Some machine names washed away. Tap a machine, then tap its blank in the notebook. Or drag it there.",
+      "say": "The page has holes where the machine names washed away. I need to work out which goes where.",
+      "params": {
+        "machines": [
+          {
+            "id": "conche",
+            "name": "Conche",
+            "does": "slowly stirs and airs the chocolate for hours",
+            "says": "The conche. A slow, warm stir that smooths the chocolate and drives out the sour.",
+            "role": "overnight"
+          },
+          {
+            "id": "press",
+            "name": "Cocoa press",
+            "does": "squeezes the butter out of the liquor",
+            "says": "The cocoa press squeezes the butter out of chocolate liquor. Dadu kept his butter in.",
+            "role": "butter"
+          },
+          {
+            "id": "roaster",
+            "name": "Roaster",
+            "does": "heats beans",
+            "says": "The roaster. Hot air tumbles the beans until their smell changes.",
+            "role": "smell"
+          },
+          {
+            "id": "temper",
+            "name": "Tempering table",
+            "does": "cools and rewarms melted chocolate",
+            "says": "The tempering table. Heat, cool, heat again, so the chocolate sets glossy.",
+            "role": "heat-cool-heat"
+          },
+          {
+            "id": "melanger",
+            "name": "Melanger",
+            "does": "grinds nibs between two stones",
+            "says": "The melanger. Two granite stones turn nibs into paste.",
+            "role": "paste"
+          },
+          {
+            "id": "winnower",
+            "name": "Winnower",
+            "does": "cracks the shells and blows the husk away",
+            "says": "The winnower. It cracks each bean and a fan carries the husk off.",
+            "role": "husk"
+          }
+        ],
+        "needs": [
+          "changes how the beans smell",
+          "gets rid of the husk",
+          "grinds nibs into paste",
+          "smooths the paste slowly, overnight",
+          "heats, cools and heats again"
+        ],
+        "idleInfo": "Tap a machine to hear what it does.",
+        "pickFirst": "Pick a machine first, then tap the blank.",
+        "startLabel": "Start cooking",
+        "blankLabel": "Blank {n}"
+      },
+      "answer": {
+        "sequence": [
+          "roaster",
+          "winnower",
+          "melanger",
+          "conche",
+          "temper"
+        ],
+        "derive": [
+          "optionWith('role', ch1.roast_role)",
+          "optionWith('role', ch1.winnow_role)",
+          "optionWith('role', ch1.grind_role)",
+          "optionWith('role', ch1.conche_role)",
+          "optionWith('role', ch1.temper_role)"
+        ]
+      },
+      "feedback": {
+        "placed": [
+          "Roaster. The smell of the whole workshop starts here.",
+          "Winnower. Husk out, nibs left.",
+          "Melanger. Two stones and a lot of patience.",
+          "Conche. The slow part Dadu loved most.",
+          "Tempering table. Heat, cool, heat again."
+        ],
+        "wrong": "The {name} {does}. Line {line} needs something that {need}.",
+        "decoy": "press",
+        "complete": "That is the whole line. Now I have to actually cook it."
+      },
+      "hints": [
+        "Read what each line asks for. Line 2 talks about a husk. Line 5 talks about heat, cool, heat again.",
+        "Roaster, winnower, melanger, conche, tempering table, in that order. The cocoa press is not in this recipe."
+      ],
+      "requiresClues": [
+        "notebook:roast",
+        "notebook:winnow",
+        "notebook:grind",
+        "notebook:conche",
+        "notebook:temper"
+      ]
+    },
+    {
+      "id": "roast",
+      "type": "pick-by-sense",
+      "line": "roast",
+      "title": "Line 1: roast",
+      "prompt": "Dadu kept three tins of sample beans. Tap a tin to smell it, then roast the batch to match the notebook.",
+      "say": "Line 1. Toasted bread, never smoke. Dadu kept sample tins on the shelf.",
+      "params": {
+        "options": [
+          {
+            "id": "light",
+            "color": "#b9915e",
+            "tag": "green and sour",
+            "sense": "Grassy and sharp, a little sour. Like green mango skin.",
+            "no": "Too green. It still smells raw and sour. The notebook wants toasted bread."
+          },
+          {
+            "id": "medium",
+            "color": "#7a4526",
+            "tag": "toasted bread",
+            "sense": "Warm toasted bread, with cocoa underneath. Like the first ruti off the tawa.",
+            "no": ""
+          },
+          {
+            "id": "dark",
+            "color": "#2b1a12",
+            "tag": "smoke",
+            "sense": "Smoky and bitter. Like a paratha left on the fire.",
+            "no": "That is smoke. The notebook says to stop before the smoke."
+          }
+        ],
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "optionName": "Tin {label}",
+        "idleSense": "Tap a tin to smell it.",
+        "sensePrefix": "You lean in. ",
+        "goLabel": "Roast the batch like this",
+        "shuffle": true
+      },
+      "answer": {
+        "choice": "medium",
+        "derive": "optionWith('tag', ch1.roast_target)"
+      },
+      "feedback": {
+        "correct": "Toasted bread. That is it. The whole workshop smells like him."
+      },
+      "hints": [
+        "The notebook wants toasted bread, and to stop before the smoke. Sniff each tin.",
+        "Tin {answerLabel} smells like toasted bread."
+      ],
+      "requiresClues": [
+        "notebook:roast"
+      ]
+    },
+    {
+      "id": "winnow",
+      "type": "tap-meter",
+      "line": "winnow",
+      "title": "Line 2: winnow",
+      "prompt": "Turn the crank to crack the beans and blow the husk away.",
+      "say": "Line 2. Crack the beans and send the husk to the pigeons.",
+      "beat": {
+        "who": "Rafiq",
+        "text": "Mmm, I can smell it from the lane! Mind the husk, beta.",
+        "delay": 3200
+      },
+      "params": {
+        "variant": "crank",
+        "label": "Tap to crank",
+        "effect": "husk"
+      },
+      "answer": {
+        "count": 8,
+        "derive": "ui"
+      },
+      "feedback": {
+        "correct": "The husk goes to the pigeons. Only nibs left."
+      },
+      "hints": [
+        "Just keep tapping the crank."
+      ],
+      "requiresClues": []
+    },
+    {
+      "id": "grind",
+      "type": "ratio-slider",
+      "line": "grind",
+      "title": "Line 3: nibs and sugar",
+      "prompt": "One batch is 1 kg. Slide to decide how much of it is nibs and how much is sugar.",
+      "say": "Line 3. Nibs and sugar go in the melanger. The order slip should say how much.",
+      "params": {
+        "total": 1000,
+        "min": 400,
+        "max": 950,
+        "step": 10,
+        "start": 550,
+        "unit": "g",
+        "parts": [
+          "Nibs",
+          "Sugar"
+        ],
+        "sliderLabel": "Grams of nibs",
+        "goLabel": "Grind it"
+      },
+      "answer": {
+        "parts": [
+          650,
+          350
+        ],
+        "tolerance": 10,
+        "derive": "ch1.batch_g * ch1.cacao_pct / 100"
+      },
+      "feedback": {
+        "correct": "Sixty-five parts cacao, thirty-five parts sugar. It smells rich and sweet.",
+        "high": {
+          "who": "Rafiq",
+          "text": "Hmm, bitter and chalky, beta. That is more than sixty-five in a hundred."
+        },
+        "low": {
+          "who": "Rafiq",
+          "text": "Mishti would love it, beta, but it is far too sweet. That is less than sixty-five in a hundred."
+        }
+      },
+      "hints": [
+        "Check the order slip in the Workshop tab. How big is the batch, and what does Dark 65 mean?",
+        "A 1 kg batch of Dark 65 is 650 g nibs and 350 g sugar."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "slip"
+      ]
+    },
+    {
+      "id": "conche",
+      "type": "time-slider",
+      "line": "conche",
+      "title": "Line 4: conche",
+      "prompt": "The conche runs overnight. Set how many hours it should turn.",
+      "say": "Line 4. This part is torn. It says when to start and when to stop.",
+      "beat": {
+        "who": "Rafiq",
+        "text": "Overnight? Your Dadu never let anyone peek at the conche.",
+        "delay": 3200
+      },
+      "params": {
+        "min": 1,
+        "max": 24,
+        "step": 1,
+        "start": 6,
+        "unit": "hour",
+        "sliderLabel": "Hours of conching",
+        "goLabel": "Start the conche",
+        "unitPlural": "hours"
+      },
+      "answer": {
+        "value": 11,
+        "tolerance": 0,
+        "near": 1,
+        "derive": "24 - ch1.shutters_pm + ch1.fajr_am"
+      },
+      "feedback": {
+        "correct": "Eleven hours. Shutters down at six, stopped by the first azaan. The sour has gone smooth.",
+        "near": "Close, but Dadu was exact. Check when the shutters come down and when the azaan comes.",
+        "low": "In the morning it is still rough and sour on the tongue. It needs longer than that.",
+        "high": "By morning the chocolate has gone flat and dull. That is too long."
+      },
+      "hints": [
+        "The notebook says when to start and when to stop. Look for both in the Workshop tab, at the door and on the wall.",
+        "The shutters come down at 6 pm. The first azaan, Fajr, is at 5 am. That is 11 hours."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "sign",
+        "table"
+      ]
+    },
+    {
+      "id": "temper",
+      "type": "multi-temp",
+      "line": "temper",
+      "title": "Line 5: temper",
+      "prompt": "Set the three temperatures the notebook asks for, then run the curve. Right ones lock in.",
+      "say": "Line 5. Three tape colours. Dadu's thermometer must hold the numbers.",
+      "beat": {
+        "who": "Mishti",
+        "text": "Is it chocolate yet? Is it, is it?",
+        "delay": 3200
+      },
+      "params": {
+        "min": 20,
+        "max": 55,
+        "step": 1,
+        "start": 36,
+        "goLabel": "Run the curve",
+        "extraOff": "(And one more is off.)",
+        "rows": [
+          {
+            "key": "melt",
+            "label": "Melt",
+            "low": "Too cool to melt every crystal. The bar would come out streaky.",
+            "high": "Too hot. The chocolate would scorch.",
+            "unit": "°C"
+          },
+          {
+            "key": "cool",
+            "label": "Cool",
+            "low": "Too cold. It thickens before it can set properly.",
+            "high": "Still too warm. The good crystals cannot form yet.",
+            "unit": "°C"
+          },
+          {
+            "key": "rewarm",
+            "label": "Rewarm",
+            "low": "Too cool. It will set thick and dull.",
+            "high": "Too warm. It undoes the crystals you just made.",
+            "unit": "°C"
+          }
+        ]
+      },
+      "answer": {
+        "values": [
+          45,
+          27,
+          31
+        ],
+        "tolerance": 1,
+        "derive": [
+          "ch1.tape_red",
+          "ch1.tape_blue",
+          "ch1.tape_green"
+        ]
+      },
+      "feedback": {
+        "correct": "Forty-five, twenty-seven, thirty-one. The chocolate is glossy and smooth."
+      },
+      "hints": [
+        "The notebook names three tape colours. Look at Dadu's thermometer in the Workshop tab.",
+        "Red is 45, blue is 27, green is 31. Ignore the milk tag, this is a dark bar."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "therm"
+      ]
+    },
+    {
+      "id": "mold",
+      "type": "tap-meter",
+      "line": "mold",
+      "title": "Last line: mould",
+      "prompt": "The chocolate is poured. Tap the tray six times to knock the air out.",
+      "say": "The last line. Pour, then knock the air out.",
+      "beat": {
+        "who": "Mishti",
+        "text": "Can I lick the spoon? Please?",
+        "delay": 3200
+      },
+      "params": {
+        "variant": "tray",
+        "label": "Tap the tray",
+        "effect": "bubbles"
+      },
+      "answer": {
+        "count": 6,
+        "derive": "ui"
+      },
+      "feedback": {
+        "correct": "The air is out. Now it just has to set."
+      },
+      "hints": [
+        "Just tap the tray."
+      ],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-dark65",
+    "talk": [
+      [
+        "Rafiq",
+        "\"Tastes exactly like it did when I was a boy.\""
+      ],
+      [
+        "Mishti",
+        "Another piece, please!"
+      ],
+      [
+        "Laila",
+        "I think I can do this."
+      ]
+    ],
+    "recipeTitle": "Dadu's Dark 65, rebuilt:",
+    "recipe": [
+      "Roast to toasted bread, medium",
+      "Winnow the husk away",
+      "650 g nibs, 350 g sugar",
+      "Conche 11 hours, 6 pm to 5 am",
+      "Temper 45, then 27, then 31 °C",
+      "Mould and tap out the air"
+    ],
+    "realFact": "In real life, conching runs from a few hours to over 72 hours.",
+    "next": "Chapter 2: Eid. The notebook has a milk chocolate page. It is much more badly stained.",
+    "again": "Play chapter 1 again",
+    "artText": {
+      "alt": "A wrapped bar of Dadu's dark chocolate",
+      "brand": "BEAN-TO-BAR",
+      "name": "Dark 65",
+      "bn": "ডার্ক চকলেট",
+      "sub": "Dadu's recipe"
+    }
+  }
+}

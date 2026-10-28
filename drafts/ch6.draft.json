@@ -1,0 +1,129 @@
+{
+  "_status": "DRAFT for Tanvir's approval. Not wired into the game. Bloom causes, touch tests and the seeding fix are from the spec; all wording is new. The bloom photos are drawn as SVG on purpose so they stay fair clues. Hotspot positions are placeholders.",
+  "id": "ch6",
+  "title": "Bloom",
+  "eyebrow": "Bean-to-Bar · Chapter 6",
+  "opening": "Three bars came back to the shop. They all have white streaks.",
+  "intro": [
+    { "art": "shutter-glow", "h": "Returned bars.", "p": "A few weeks after the wedding, three bars come back to the workshop. Each one has white marks on it, and each one looks a little different." },
+    {
+      "art": "shutter-open",
+      "cast": ["Laila", "Rafiq"],
+      "talk": [
+        ["Rafiq", "Laila beta, three of the bars came back. People are saying the chocolate has gone off."],
+        ["Laila", "Gone off? They are covered in white streaks. Is it mould?"],
+        ["Rafiq", "I do not think so. It looks more like a chalky film."],
+        ["Laila", "Then it has a name. Dadu called it bloom. I think he wrote down how to tell the kinds apart."],
+        ["Rafiq", "Can you fix them?"],
+        ["Laila", "First I need to find out why each one bloomed. Then I can fix it."]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "The bloom page",
+    "lines": [
+      { "id": "diagnose", "text": "A white mark on the bar is called bloom. [[torn:…test each bar with your finger and a drop of water…]]" },
+      { "id": "fix", "text": "Bloom from tempering can be fixed. [[q:Seed it with good chocolate.]] Melt it, stir in chopped tempered chocolate, then cool and work it.", "note": "melt 45, seed about a quarter, cool 31" },
+      { "id": "mold", "text": "Pour into the moulds. Tap the tray to knock the air out." }
+    ]
+  },
+  "clues": [
+    { "id": "card", "hotspot": { "x": 7.8, "y": 44.8, "w": 14.4, "h": 30.4 }, "title": "Dadu's bloom card", "art": "card-bloom", "text": "Three kinds, with a test for each. Smears under a warm finger: fat bloom. Vanishes under a drop of water: sugar bloom. Dull and soft and stuck in the mould: never tempered.", "provides": { "ch6.when_smear": "fat-bloom", "ch6.when_water": "sugar-bloom", "ch6.when_soft": "never-tempered" } },
+    { "id": "seeding", "hotspot": { "x": 26.1, "y": 31.2, "w": 11.7, "h": 17.6 }, "title": "Dadu's seeding note", "art": "note-seeding", "text": "\"Melt it to 45. Stir in chopped tempered chocolate, about a quarter as much. Cool it to 31.\"", "provides": { "ch6.melt": 45, "ch6.seed_pct": 25, "ch6.cool": 31 } },
+    { "id": "fridge", "hotspot": { "x": 45.5, "y": 36, "w": 8, "h": 13 }, "title": "The shop fridge", "art": "fridge", "text": "A tray of bars sat in here over the wedding week. Rafiq Bhai says the door was left open a few times.", "provides": {} },
+    { "id": "returns", "hotspot": { "x": 66.1, "y": 13.6, "w": 11.1, "h": 30 }, "title": "The three returned bars", "art": "returned-bars", "text": "Rafiq Bhai wrapped them in paper. Each one is marked with a letter, A, B or C.", "provides": {} },
+    { "id": "log", "hotspot": { "x": 78.9, "y": 17.6, "w": 17.2, "h": 24.8 }, "title": "The return log", "art": "return-log", "text": "Where each bar was kept: A sat in a hot shop window, B in the fridge and then the kitchen, C was poured and left to cool on its own.", "provides": {} }
+  ],
+  "steps": [
+    {
+      "id": "diagnose",
+      "type": "diagnose",
+      "line": "diagnose",
+      "title": "Line 1: why did they bloom?",
+      "prompt": "For each bar, tap it to run the touch test, then choose the cause.",
+      "say": "Three bars, three tests. Dadu's card says what each result means.",
+      "params": {
+        "photos": [
+          { "id": "a", "label": "Bar A", "art": "bloom-grey", "test": "smear", "testText": "You press a warm finger on the streak. It smears, grey and greasy." },
+          { "id": "b", "label": "Bar B", "art": "bloom-dry", "test": "water", "testText": "You touch a drop of water to the white film. It dissolves and the film vanishes." },
+          { "id": "c", "label": "Bar C", "art": "bloom-dull", "test": "soft", "testText": "The surface is dull and soft, and the whole bar is stuck in the mould." }
+        ],
+        "causes": [
+          { "id": "fat-bloom", "name": "Fat bloom", "says": "Fat bloom: the cocoa butter has come to the surface. It comes from poor tempering or a warm place." },
+          { "id": "sugar-bloom", "name": "Sugar bloom", "says": "Sugar bloom: moisture dissolved some sugar, and it dried into a gritty white film. A cold fridge, then a humid room can do it." },
+          { "id": "never-tempered", "name": "Never tempered", "says": "Never tempered: the chocolate was never taken through its heat, cool, heat steps, so it never set properly." }
+        ],
+        "photoHint": "Tap a bar to run the touch test.",
+        "causeHint": "Now choose the cause for this bar.",
+        "goLabel": "Name the causes",
+        "wrongText": { "fat-bloom": "That bar does not smear. Check the touch test again.", "sugar-bloom": "That film does not vanish under water. Check the touch test again.", "never-tempered": "That bar is not soft and stuck. Check the touch test again." },
+        "unfilled": "Run the test and choose a cause for every bar first."
+      },
+      "answer": { "pairs": { "a": "fat-bloom", "b": "sugar-bloom", "c": "never-tempered" }, "derive": { "a": "ch6.when_smear", "b": "ch6.when_water", "c": "ch6.when_soft" } },
+      "feedback": { "correct": "Fat bloom, sugar bloom, and one that was never tempered. Three different problems, and each has a different cause." },
+      "hints": [
+        "Dadu's bloom card in the Workshop says what each touch test result means.",
+        "Bar A smears, so it is fat bloom. Bar B vanishes under water, so it is sugar bloom. Bar C is dull, soft and stuck, so it was never tempered."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["card"]
+    },
+    {
+      "id": "fix",
+      "type": "multi-temp",
+      "line": "fix",
+      "title": "Line 2: seed and re-temper",
+      "prompt": "Set the three numbers for fixing the bars with seeding. Right ones lock in.",
+      "say": "Dadu's seeding note says how to rescue them. Melt, add a little good chocolate, cool and work.",
+      "params": {
+        "min": 20, "max": 55, "step": 1, "start": 36, "goLabel": "Run the curve", "extraOff": "(And one more is off.)",
+        "rows": [
+          { "key": "melt", "label": "Melt", "unit": "°C", "min": 20, "max": 55, "low": "Too cool to melt out the bad crystals. The bloom would come straight back.", "high": "Too hot. The chocolate would scorch." },
+          { "key": "seed", "label": "Seed", "unit": "%", "min": 0, "max": 60, "start": 10, "low": "Too little tempered chocolate to start the good crystals. It will set dull.", "high": "Far too much seed. It will not melt in, and the chocolate will be thick and lumpy." },
+          { "key": "cool", "label": "Cool to", "unit": "°C", "min": 20, "max": 55, "low": "Too cold. It thickens before it can set properly.", "high": "Still too warm. The seeds melt and the good crystals are lost." }
+        ]
+      },
+      "answer": { "values": [45, 25, 31], "tolerance": 1, "derive": ["ch6.melt", "ch6.seed_pct", "ch6.cool"] },
+      "feedback": { "correct": "Melted at 45, seeded with a quarter as much good chocolate, cooled to 31. Glossy, with no bloom." },
+      "hints": [
+        "Dadu's seeding note in the Workshop gives all three numbers.",
+        "Melt to 45, stir in about a quarter as much chopped tempered chocolate (25 percent), then cool to 31."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["seeding"]
+    },
+    {
+      "id": "mold",
+      "type": "tap-meter",
+      "line": "mold",
+      "title": "Last line: mould",
+      "prompt": "The chocolate is glossy again. Tap the tray six times to knock the air out.",
+      "say": "Pour, then knock the air out.",
+      "params": { "variant": "tray", "label": "Tap the tray", "effect": "bubbles" },
+      "answer": { "count": 6, "derive": "ui" },
+      "feedback": { "correct": "Smooth and glossy. The streaks are gone." },
+      "hints": ["Just tap the tray."],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-dark65",
+    "talk": [
+      ["Rafiq", "\"Shiny again. People will think it is brand new.\""],
+      ["Laila", "Keep it cool and dry, Rafiq Bhai, and out of the sun. And never leave the fridge door open."],
+      ["Mishti", "Bloom is a funny word for a white streak."]
+    ],
+    "recipeTitle": "Dadu's bloom page, rebuilt:",
+    "recipe": [
+      "Smears under a warm finger: fat bloom (poor tempering or a warm place)",
+      "Vanishes under water: sugar bloom (moisture, such as a cold fridge then a humid room)",
+      "Dull, soft and stuck in the mould: never tempered",
+      "Fix with seeding: melt to 45, stir in a quarter as much tempered chocolate, cool to 31"
+    ],
+    "realFact": "In real life, bloom is harmless to eat. It only changes how the chocolate looks and feels, and good tempering and steady storage keep it away.",
+    "next": "Chapter 7: Tasting Night.",
+    "again": "Play chapter 6 again"
+  }
+}

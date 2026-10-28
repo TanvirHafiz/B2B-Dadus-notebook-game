@@ -1,0 +1,155 @@
+{
+  "_status": "DRAFT for Tanvir's approval. Not wired into the game. Wedding boxes are Dark 90 (900 g cacao, 100 g sugar per kilo), as discussed; numbers pending the chocolatier. Hotspot positions are placeholders until the Chapter 5 scene exists. All wording is new.",
+  "id": "ch5",
+  "title": "Wedding Boxes",
+  "eyebrow": "Bean-to-Bar · Chapter 5",
+  "opening": "Five kilos for a wedding. That is five times more than I have ever made.",
+  "intro": [
+    { "art": "shutter-glow", "h": "A wedding.", "p": "Rafiq Bhai's niece is getting married on Friday. The family wants gift boxes of Dadu's chocolate for every guest." },
+    {
+      "art": "shutter-open",
+      "cast": ["Laila", "Rafiq"],
+      "talk": [
+        ["Rafiq", "Laila beta! My niece's wedding is on Friday. Five kilos of dark chocolate, in little boxes for the guests."],
+        ["Laila", "Five kilos? I have only ever made one."],
+        ["Rafiq", "Then it is five times the work, no? Easy."],
+        ["Laila", "Not exactly. Some things grow five times. Some things might not."],
+        ["Rafiq", "The family wants the darkest bar you can make. Ninety, they said. And a few toppings, for the sweet tooth."],
+        ["Laila", "Fine. I will read the order slip and Dadu's notes before I weigh anything."]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "Dark 90 chocolate · 5 kg",
+    "lines": [
+      { "id": "scale", "text": "Scale the recipe to the big batch. Dark [[blur:ninety]] means that many of every hundred is cacao. [[torn:…weigh it, do not guess…]]", "note": "4500 g cacao, 500 g sugar, 100 bars" },
+      { "id": "conche", "text": "Conche it. [[q:Big pot or small, the stone turns all night.]]", "note": "11 hours" },
+      { "id": "tray", "text": "Fill the sample tray the way the customer drew it. [[torn:…nothing wet goes in the chocolate…]]" },
+      { "id": "mold", "text": "Pour into the moulds. Tap the tray to knock the air out." }
+    ]
+  },
+  "clues": [
+    { "id": "slip", "hotspot": { "x": 59.4, "y": 66.4, "w": 11.7, "h": 12.0 }, "title": "The wedding order", "art": "slip-wedding", "text": "Dark 90. Five kilos. Fifty grams a bar, one for every guest. Delivery on Friday.", "provides": { "ch5.batch_g": 5000, "ch5.cacao_pct": 90, "ch5.bar_g": 50 } },
+    { "id": "note", "hotspot": { "x": 7.8, "y": 44.8, "w": 14.4, "h": 30.4 }, "title": "Dadu's note on big batches", "art": "note-big-pot", "text": "\"Big pot or small, the stone turns all night.\" He wrote it beside the conche in thick pencil.", "provides": { "ch5.conche_rule": "same night" } },
+    { "id": "sketch", "hotspot": { "x": 26.1, "y": 31.2, "w": 11.7, "h": 17.6 }, "title": "The customer's sketch", "art": "sketch-tray", "text": "A drawing of a sample tray, four rows of five. The family has marked each square: plain, toasted dry coconut, or puffed rice.", "provides": { "ch5.grid": ["C", "P", "P", "P", "C", "P", "R", "C", "R", "P", "P", "R", "C", "P", "P", "R", "P", "C", "P", "R"] } },
+    { "id": "toppings", "hotspot": { "x": 45.5, "y": 36, "w": 8, "h": 13 }, "title": "The toppings shelf", "art": "toppings", "text": "Three jars: toasted dry coconut, puffed rice and a fresh coconut, still wet inside. Dadu stuck a note on the fresh one: \"Not near the chocolate.\"", "provides": {} },
+    { "id": "scale", "hotspot": { "x": 66.1, "y": 13.6, "w": 11.1, "h": 30 }, "title": "The big scale", "art": "scale", "text": "Dadu weighed every batch twice. \"Weigh it, don't guess,\" he said.", "provides": {} },
+    { "id": "boxes", "hotspot": { "x": 78.9, "y": 17.6, "w": 17.2, "h": 24.8 }, "title": "A stack of gift boxes", "art": "boxes", "text": "Flat-packed and tied with red string. The family sent a hundred of them.", "provides": {} }
+  ],
+  "steps": [
+    {
+      "id": "scale",
+      "type": "scale-recipe",
+      "line": "scale",
+      "title": "Line 1: scale the recipe",
+      "prompt": "Work out the weights for the whole batch. Type a number in each box.",
+      "say": "Five kilos is a lot of cacao. The order slip says what kind of bar, how big the batch is and how big each bar is.",
+      "params": {
+        "fields": [
+          { "key": "cacao", "label": "Cacao (nibs)", "unit": "g", "min": 0, "max": 5000, "near": 100, "high": "That is too much cacao. The bar would be harsher than the family asked for.", "low": "That is too little cacao. The bar would be sweeter than a Dark 90.", "nearText": "Close, but check your sum. Dark 90 means ninety of every hundred is cacao." },
+          { "key": "sugar", "label": "Sugar", "unit": "g", "min": 0, "max": 5000, "near": 50, "high": "That is too much sugar. It would not taste like a Dark 90.", "low": "That is too little sugar. The bar would be harsh and bitter.", "nearText": "Close, but check your sum. What is left of the batch after the cacao?" },
+          { "key": "bars", "label": "Bars", "unit": "bars", "min": 0, "max": 500, "near": 5, "high": "That is more bars than the batch can make. Each bar is the size on the slip.", "low": "That is fewer bars than the batch can make. Each bar is the size on the slip.", "nearText": "Close, but check your sum. How many bars of that size are in five kilos?" }
+        ],
+        "goLabel": "Check my weights"
+      },
+      "answer": { "fields": { "cacao": 4500, "sugar": 500, "bars": 100 }, "derive": { "cacao": "ch5.batch_g * ch5.cacao_pct / 100", "sugar": "ch5.batch_g - ch5.batch_g * ch5.cacao_pct / 100", "bars": "ch5.batch_g / ch5.bar_g" } },
+      "feedback": { "correct": "Forty-five hundred grams of cacao, five hundred of sugar, and a hundred bars. Everything is exactly five times, or so it seems." },
+      "hints": [
+        "Read the wedding order in the Workshop. It gives the batch, the kind of bar and the size of each bar.",
+        "Five kilos is 5000 g. Ninety percent of it is 4500 g of cacao, which leaves 500 g of sugar. At 50 g a bar, that makes 100 bars."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["slip"]
+    },
+    {
+      "id": "conche",
+      "type": "time-slider",
+      "line": "conche",
+      "title": "Line 2: conche",
+      "prompt": "Set how many hours the conche should turn for the big batch.",
+      "say": "Five times the chocolate. Surely that means five times the hours? Dadu wrote something about this.",
+      "params": { "min": 1, "max": 72, "step": 1, "start": 24, "unit": "hour", "sliderLabel": "Hours of conching", "goLabel": "Start the conche" },
+      "answer": { "value": 11, "tolerance": 0, "near": 1, "derive": "24 - ch1.shutters_pm + ch1.fajr_am" },
+      "feedback": {
+        "correct": "Eleven hours, the same night as always. A bigger pot does not need a longer night.",
+        "near": "Close, but the note says the same night as always. Check the sign and the timetable from Chapter 1.",
+        "low": "It will still be rough and sour. The stone needs the whole night.",
+        "high": "That is far too long. The chocolate would go flat and dull. The stone only needs one night."
+      },
+      "hints": [
+        "Dadu's note about big batches is in the Workshop. Does a bigger pot need a longer night?",
+        "No. The stone turns all night: from 6 pm to 5 am, which is 11 hours, the same as for one kilo."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["note", "ch1:sign", "ch1:table"]
+    },
+    {
+      "id": "tray",
+      "type": "pattern-fill",
+      "line": "tray",
+      "title": "Line 3: the sample tray",
+      "prompt": "Fill the tray to match the customer's sketch. Tap a topping, then tap a square. Or drag it there.",
+      "say": "Twenty squares, three toppings. The family drew exactly what they want.",
+      "params": {
+        "rows": 4,
+        "cols": 5,
+        "toppings": [
+          { "id": "P", "name": "Plain", "says": "Plain chocolate, no topping." },
+          { "id": "C", "name": "Toasted dry coconut", "says": "Toasted dry coconut. Crisp, nutty and dry." },
+          { "id": "R", "name": "Puffed rice", "says": "Puffed rice. Light and crunchy." },
+          { "id": "F", "name": "Fresh coconut", "says": "Fresh coconut. Soft and full of water.", "reject": "Fresh coconut is full of water. A few drops of water make chocolate seize, and Dadu's note on seizing says so. Use the toasted dry kind." }
+        ],
+        "idleInfo": "Tap a topping to hear about it.",
+        "pickFirst": "Pick a topping first, then tap a square.",
+        "empty": "Empty",
+        "goLabel": "Check the tray",
+        "squareLabel": "Square {n}"
+      },
+      "answer": { "grid": ["C", "P", "P", "P", "C", "P", "R", "C", "R", "P", "P", "R", "C", "P", "P", "R", "P", "C", "P", "R"], "derive": "ch5.grid" },
+      "feedback": {
+        "correct": "Ten plain, five coconut, five puffed rice, just as the sketch shows.",
+        "wrongSquares": "{n} squares do not match the sketch yet. Look at it again.",
+        "unfilled": "Some squares are still empty. The sketch has a topping, or plain, in every square."
+      },
+      "hints": [
+        "The customer's sketch in the Workshop shows what goes in each square.",
+        "Fill every square to match the sketch: ten plain, five toasted dry coconut and five puffed rice."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["sketch", "ch3:seize"]
+    },
+    {
+      "id": "mold",
+      "type": "tap-meter",
+      "line": "mold",
+      "title": "Last line: mould",
+      "prompt": "The chocolate is poured. Tap the tray six times to knock the air out.",
+      "say": "Pour, then knock the air out.",
+      "params": { "variant": "tray", "label": "Tap the tray", "effect": "bubbles" },
+      "answer": { "count": 6, "derive": "ui" },
+      "feedback": { "correct": "The air is out. A hundred bars, ready to set." },
+      "hints": ["Just tap the tray."],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-dark90",
+    "talk": [
+      ["Rafiq", "\"A hundred bars, and every one of them dark as night. The family will be thrilled.\""],
+      ["Mishti", "Can I carry a box to the wedding?"],
+      ["Laila", "Five times the chocolate, and the same night in the conche. I learned something today."]
+    ],
+    "recipeTitle": "Dadu's wedding batch, rebuilt:",
+    "recipe": [
+      "5 kg Dark 90: 4500 g cacao, 500 g sugar",
+      "Conche 11 hours, the same night as a small batch",
+      "Fill the sample tray as drawn: toasted dry coconut and puffed rice, never fresh coconut",
+      "Mould, tap out the air, and make 100 bars of 50 g"
+    ],
+    "realFact": "In real life, weights grow with the batch, but conching time depends on the machine and the style, so a bigger batch often needs longer. In this story, it is Dadu's own rule that the stone turns all night.",
+    "next": "Chapter 6: Bloom.",
+    "again": "Play chapter 5 again"
+  }
+}

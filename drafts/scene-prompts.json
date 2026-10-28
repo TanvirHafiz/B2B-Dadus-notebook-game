@@ -1,0 +1,23 @@
+{
+ "style": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark.",
+ "scenes": {
+  "ch1": "Interior seen straight on: a lit evening bench with a cacao jar on a shelf at left-centre, a hanging apron on the left wall, an old radio, a tall glass thermometer on the right wall, a paper timetable pinned beside it, a small hanging sign, and a slip of paper on the bench front right.",
+  "ch2": "Interior seen straight on, a week before Eid: a folded note on the left wall, a milk powder tin on a shelf left-centre, a small glowing lantern and a glass of tea on the bench centre, a tall thermometer on the right wall, a slip of paper on the bench front right.",
+  "ch3": "Interior seen straight on, rainy monsoon evening, rain on the window: a dry rack on the left wall, a cool shelf left-centre, a closed jar centre, a seized lumpy chocolate pot on the right, a milk note on the wall, a bucket catching a drip on the floor front right.",
+  "ch4": "Interior seen straight on: a farmer's note on the left wall, a cut-test card left-centre, a smell card centre, a small brass scale on the right, a checked gamchha cloth hung on the right wall, a jute sack of cacao beans by the door.",
+  "ch5": "Interior seen straight on: a slip of paper front right on the bench, a note on the left wall, a pencil sketch left-centre, jars of toppings centre, a scale on the right, stacked gift boxes tied with string on the far right.",
+  "ch6": "Interior seen straight on: a card on the left wall, a seeding tray left-centre, a small fridge centre, a tray of returned chocolate bars with pale bloom on the right, a notebook log on the far right.",
+  "ch7": "Interior seen straight on, tasting night: a roaster on the left, a conche machine left-centre, a cacao pod centre, tasting spoons in a row on the bench front right, an open notebook on the right, an old framed photograph on the far right wall.",
+  "ch8": "Interior seen straight on, opening morning: an order book on the left bench, recipe cards left-centre, topping jars centre, a small fridge, the shop's roll-up shutter handle on the right, an old framed sepia photograph on the far right wall."
+ },
+ "shutter": {
+  "ch1": "A lamp-lit workshop bench glowing warmly, seen from the lane outside through the open doorway at night.",
+  "ch2": "A workshop interior a week before Eid, warm lantern light, strings of lights, seen from the lane through the open doorway.",
+  "ch3": "A workshop interior on a rainy monsoon evening, wet lane in front, warm light inside, seen through the open doorway.",
+  "ch4": "A workshop doorway with a big jute sack of cacao beans just delivered at the threshold, morning light, seen from the lane.",
+  "ch5": "A workshop interior with stacked wedding gift boxes and ribbons on the bench, seen from the lane through the open doorway.",
+  "ch6": "A workshop interior with a tray of returned chocolate bars on the bench, quiet afternoon light, seen from the lane.",
+  "ch7": "A workshop interior set for a tasting night, little cups and spoons on the bench, lanterns glowing, seen from the lane.",
+  "ch8": "Morning sunlight pouring into the workshop across the bench, a lane full of people waiting outside, seen from the lane."
+ }
+}

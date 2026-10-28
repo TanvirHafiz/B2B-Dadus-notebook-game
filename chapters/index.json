@@ -1,0 +1,79 @@
+{
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Dark 65",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ],
+      "photo": "dark"
+    },
+    {
+      "id": "ch2",
+      "title": "Eid Milk",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ],
+      "photo": "milk"
+    },
+    {
+      "id": "ch3",
+      "title": "Monsoon Leak",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Bean Delivery",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Wedding Boxes",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ],
+      "photo": "dark90"
+    },
+    {
+      "id": "ch6",
+      "title": "Bloom",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ]
+    },
+    {
+      "id": "ch7",
+      "title": "Tasting Night",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ]
+    },
+    {
+      "id": "ch8",
+      "title": "Opening Day",
+      "available": true,
+      "langs": [
+        "en",
+        "bn"
+      ]
+    }
+  ]
+}

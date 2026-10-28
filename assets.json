@@ -1,0 +1,234 @@
+{
+ "model": "google/nano-banana-2-lite (fal.ai)",
+ "generated": "2026-10-28",
+ "licence": "Non-commercial use only: the project owner confirmed on 2026-10-28 that the site earns no money. Generated images are used on that basis; re-check the model terms before any commercial use.",
+ "cost": "Not reported by the tool; see the fal.ai dashboard.",
+ "seed": "not set (not reproducible)",
+ "negativePrompt": "none (prompts say: no text, no letters, no numbers, no logos, no watermark)",
+ "assets": [
+  {
+   "file": "assets/art/laila.webp",
+   "source": "source-assets/art/portrait-laila.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92b8-7b52-8fbd-50335287ed28",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/rafiq.webp",
+   "source": "source-assets/art/portrait-rafiq.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92b2-7343-a0e7-badd0ef78afd",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/mishti.webp",
+   "source": "source-assets/art/portrait-mishti.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92b4-7981-aa9a-11bcc77d799a",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/dadu.webp",
+   "source": "source-assets/art/portrait-dadu.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92ba-7561-a5fd-7196d7fa8458",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/kobir.webp",
+   "source": "source-assets/art/portrait-kobir.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92ad-7381-afe3-6ac41e0b6202",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/nazma.webp",
+   "source": "source-assets/art/portrait-nazma.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92ae-7df1-b962-fb865d04de66",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/jamal.webp",
+   "source": "source-assets/art/portrait-jamal.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92ac-7d73-a411-550323433986",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/shumi.webp",
+   "source": "source-assets/art/portrait-shumi.png",
+   "kind": "portrait",
+   "requestId": "01a1819a-92b1-7872-bdf0-6d8dc445d639",
+   "size": "256x256 (cropped from 1024x1024)"
+  },
+  {
+   "file": "assets/art/scene-ch1.webp",
+   "source": "source-assets/art/scene-ch1.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on: a lit evening bench with a cacao jar on a shelf at left-centre, a hanging apron on the left wall, an old radio, a tall glass thermometer on the right wall, a paper timetable pinned beside it, a small hanging sign, and a slip of paper on the bench front right.",
+   "requestId": "01a181ae-00ee-7352-b763-b27e3401649b",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch2.webp",
+   "source": "source-assets/art/scene-ch2.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on, a week before Eid: a folded note on the left wall, a milk powder tin on a shelf left-centre, a small glowing lantern and a glass of tea on the bench centre, a tall thermometer on the right wall, a slip of paper on the bench front right.",
+   "requestId": "01a181ae-012e-7581-ab53-61f7ec19a0ac",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch3.webp",
+   "source": "source-assets/art/scene-ch3.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on, rainy monsoon evening, rain on the window: a dry rack on the left wall, a cool shelf left-centre, a closed jar centre, a seized lumpy chocolate pot on the right, a milk note on the wall, a bucket catching a drip on the floor front right.",
+   "requestId": "01a181ae-012c-7aa3-a7a0-36b5ce7238ee",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch4.webp",
+   "source": "source-assets/art/scene-ch4.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on: a farmer's note on the left wall, a cut-test card left-centre, a smell card centre, a small brass scale on the right, a checked gamchha cloth hung on the right wall, a jute sack of cacao beans by the door.",
+   "requestId": "01a181ae-012c-7203-808f-ba5b47471c6e",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch5.webp",
+   "source": "source-assets/art/scene-ch5.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on: a slip of paper front right on the bench, a note on the left wall, a pencil sketch left-centre, jars of toppings centre, a scale on the right, stacked gift boxes tied with string on the far right.",
+   "requestId": "01a181ae-012f-7bc1-a651-110cf9df5ff1",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch6.webp",
+   "source": "source-assets/art/scene-ch6.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on: a card on the left wall, a seeding tray left-centre, a small fridge centre, a tray of returned chocolate bars with pale bloom on the right, a notebook log on the far right.",
+   "requestId": "01a181ae-0129-7f92-86cd-3f307cddfd42",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch7.webp",
+   "source": "source-assets/art/scene-ch7.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on, tasting night: a roaster on the left, a conche machine left-centre, a cacao pod centre, tasting spoons in a row on the bench front right, an open notebook on the right, an old framed photograph on the far right wall.",
+   "requestId": "01a181ae-012a-77f0-b3ce-c20e612509f7",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/scene-ch8.webp",
+   "source": "source-assets/art/scene-ch8.png",
+   "kind": "workshop scene",
+   "prompt": "Warm storybook gouache illustration, soft lamplight, gentle paper texture, cocoa browns with cream, caramel and a little warm gold. A small old chocolate workshop in Old Dhaka, wide view, no people. No text, no letters, no numbers, no logos, no watermark. Interior seen straight on, opening morning: an order book on the left bench, recipe cards left-centre, topping jars centre, a small fridge, the shop's roll-up shutter handle on the right, an old framed sepia photograph on the far right wall.",
+   "requestId": "01a181ae-012f-7e20-8363-18140dae5486",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch1.webp",
+   "source": "source-assets/art/shutter-ch1.png",
+   "kind": "behind the shutter",
+   "prompt": "A lamp-lit workshop bench glowing warmly, seen from the lane outside through the open doorway at night.",
+   "requestId": "01a181ae-092f-74a0-bf3d-0149f42462a7",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch2.webp",
+   "source": "source-assets/art/shutter-ch2.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop interior a week before Eid, warm lantern light, strings of lights, seen from the lane through the open doorway.",
+   "requestId": "01a181ae-09cc-7c43-8d38-a2f99ea8b735",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch3.webp",
+   "source": "source-assets/art/shutter-ch3.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop interior on a rainy monsoon evening, wet lane in front, warm light inside, seen through the open doorway.",
+   "requestId": "01a181ae-0995-7153-af48-4e500663ff4f",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch4.webp",
+   "source": "source-assets/art/shutter-ch4.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop doorway with a big jute sack of cacao beans just delivered at the threshold, morning light, seen from the lane.",
+   "requestId": "01a181ae-09ce-72c0-8eb0-64eea68ccede",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch5.webp",
+   "source": "source-assets/art/shutter-ch5.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop interior with stacked wedding gift boxes and ribbons on the bench, seen from the lane through the open doorway.",
+   "requestId": "01a181ae-0993-7882-afc5-54ee534992f0",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch6.webp",
+   "source": "source-assets/art/shutter-ch6.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop interior with a tray of returned chocolate bars on the bench, quiet afternoon light, seen from the lane.",
+   "requestId": "01a181ae-09cc-7352-bce7-339b17ccae40",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch7.webp",
+   "source": "source-assets/art/shutter-ch7.png",
+   "kind": "behind the shutter",
+   "prompt": "A workshop interior set for a tasting night, little cups and spoons on the bench, lanterns glowing, seen from the lane.",
+   "requestId": "01a181ae-09c9-7cd0-a5cc-6173938aaad7",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/shutter-ch8.webp",
+   "source": "source-assets/art/shutter-ch8.png",
+   "kind": "behind the shutter",
+   "prompt": "Morning sunlight pouring into the workshop across the bench, a lane full of people waiting outside, seen from the lane.",
+   "requestId": "01a181ae-09cf-7532-bae9-78560b05749a",
+   "size": "1280x720 (from 1376x768)"
+  },
+  {
+   "file": "assets/art/wrap-dark.webp",
+   "source": "source-assets/art/wrap-dark.png",
+   "kind": "wrapper top",
+   "prompt": "split cacao pod with beans (warm gouache still life, no text)",
+   "requestId": "01a181b9-977d-7e92-8669-a3dec8e3fecb",
+   "size": "400x260"
+  },
+  {
+   "file": "assets/art/wrap-milk.webp",
+   "source": "source-assets/art/wrap-milk.png",
+   "kind": "wrapper top",
+   "prompt": "milk pour with beans and cardamom (warm gouache still life, no text)",
+   "requestId": "01a181b9-977b-7962-baf4-9b89e047e333",
+   "size": "400x260"
+  },
+  {
+   "file": "assets/art/wrap-dark90.webp",
+   "source": "source-assets/art/wrap-dark90.png",
+   "kind": "wrapper top",
+   "prompt": "dark nibs with a cracked dark square (warm gouache still life, no text)",
+   "requestId": "01a181b9-977c-7c81-8b42-179ec1240fa3",
+   "size": "400x260"
+  }
+ ],
+ "audio": [
+  {
+   "file": "assets/audio/music.ogg",
+   "source": "source-assets/audio/desifreemusic-soft-romantic-folk-melody-flute-331843.mp3",
+   "kind": "music loop",
+   "author": "desifreemusic (Pixabay)",
+   "licence": "Pixabay Content License, supplied by the project owner on 2026-10-28. Free for commercial use; not CC0. Keep a copy of the Pixabay licence page with the release records.",
+   "duration": "1:55",
+   "playback": "volume 0.3, loops, starts after first tap, mute saved"
+  },
+  {
+   "files": "assets/audio/*.ogg (tap, ok, no, win, page, pour, tin, shutter, crank, rattle)",
+   "kind": "sound effects",
+   "licence": "Synthesised with ffmpeg by tools/make-sfx.sh; no third-party recordings."
+  }
+ ]
+}

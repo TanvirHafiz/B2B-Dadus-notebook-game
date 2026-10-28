@@ -1,0 +1,246 @@
+{
+  "_status": "DRAFT for Tanvir's approval. Not wired into the game. Free-build with three orders and the naming and wrapper screen are from the spec. Every order is a set of constraints from earlier chapters; any answer that meets all of them is accepted. The builder fields, the orders, the people and all wording are new. Recipe numbers come from earlier chapters and still need your chocolatier's OK. The wrapper pictures are placeholders; the final wrappers are text-free generated images in M7, with the bar name as live text on top.",
+  "id": "ch8",
+  "title": "Opening Day",
+  "eyebrow": "Bean-to-Bar · Chapter 8",
+  "gameTitle": "Dadu's Notebook",
+  "opening": "The shutters go up for good today. Three orders are waiting.",
+  "cast": {
+    "Laila": { "name": "Laila", "portrait": "laila" },
+    "Rafiq": { "name": "Rafiq Bhai", "portrait": "rafiq", "side": "right" },
+    "Mishti": { "name": "Mishti", "portrait": "mishti", "side": "right" },
+    "Hint": { "name": "Dadu's note", "portrait": "dadu" },
+    "Kobir": { "name": "Kobir", "portrait": "kobir", "side": "right" },
+    "Nazma": { "name": "Nazma Apa", "portrait": "nazma", "side": "right" }
+  },
+  "intro": [
+    { "art": "shutter-closed", "h": "Opening day.", "p": "The shutters have been down since the funeral. Today Laila lifts them herself, and this time they stay up." },
+    {
+      "art": "shutter-open",
+      "cast": ["Laila", "Rafiq"],
+      "talk": [
+        ["Rafiq", "Three orders came in before you even opened, Laila beta. Word travels fast in Old Dhaka."],
+        ["Laila", "Three? I have not even swept the floor."],
+        ["Rafiq", "Each customer knows what they want. You know how to make it, no?"],
+        ["Laila", "I know how to read what Dadu left, and how to ask the right question."],
+        ["Rafiq", "That is how he started too. Go on. The book is on the bench."]
+      ]
+    },
+    {
+      "art": "shutter-glow",
+      "cast": ["Laila"],
+      "talk": [
+        ["Laila", "There is no page for this one. Every order is a puzzle made from all the other pages."],
+        ["Laila", "Fine. Milk, dark, conche, tape, shelf. I know what each of them does now."]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "The order book",
+    "lines": [
+      { "id": "o1", "text": "Order 1, Rafiq Bhai: a bar for a child. [[torn:…we have no fridge in the shop…]]", "note": "milk bar" },
+      { "id": "o2", "text": "Order 2, Nazma Apa: the darkest bar there is, for a gift. [[blur:Dark how dark?]]", "note": "Dark 90" },
+      { "id": "o3", "text": "Order 3, Mishti's school fair: dark, not too bitter, no milk, with something crunchy on top.", "note": "Dark 65, dry topping" },
+      { "id": "name", "text": "A shop needs a name for its own bar. [[torn:…Dadu never wrote one down…]]" },
+      { "id": "shutter", "text": "Lift the shutter." }
+    ]
+  },
+  "workshop": {
+    "scene": "assets/scene-ch8.svg",
+    "sceneAlt": "Dadu's workshop on opening day, with the order book on the bench and the shutter half open. Tap the glowing objects to remember.",
+    "hintLine": "Tap the glowing spots. Dadu left clues all over the workshop.",
+    "memoEyebrow": "Laila remembers"
+  },
+  "clues": [
+    { "id": "orders", "hotspot": { "x": 7.8, "y": 44.8, "w": 14.4, "h": 30.4 }, "title": "The three orders", "art": "order-book", "text": "Order 1: milk, for a child, and no fridge in the shop. Order 2: dark, as dark as it gets, for a gift. Order 3: dark, not too bitter, no milk, something dry and crunchy on top.", "provides": { "ch8.o1_kind": "milk", "ch8.o1_no_fridge": "yes", "ch8.o2_kind": "dark", "ch8.o3_kind": "dark", "ch8.o3_milk": "no", "ch8.o3_topping": "dry and crunchy" } },
+    { "id": "cards", "hotspot": { "x": 26.1, "y": 31.2, "w": 11.7, "h": 17.6 }, "title": "Dadu's recipe cards", "art": "recipe-cards", "text": "Dark bars have no milk powder. A milk bar is 40 cacao, 35 sugar and 25 milk powder, from the Eid page.", "provides": { "ch8.dark_milk": "none", "ch8.milk_cacao": 40 } },
+    { "id": "toppings", "hotspot": { "x": 45.5, "y": 36, "w": 8, "h": 13 }, "title": "The toppings shelf", "art": "toppings-dry", "text": "Four jars: puffed rice, toasted dry coconut, chopped nuts and fresh coconut. Dadu's tag on the nuts says: sprinkle on after moulding, never mix in. The fresh coconut still carries its note.", "provides": { "ch8.dry_toppings": ["puffed", "coconut", "nuts"] } },
+    { "id": "fridge", "hotspot": { "x": 59.4, "y": 66.4, "w": 11.7, "h": 12.0 }, "title": "The shop shelves", "art": "shop-shelves", "text": "A cool shelf, a sealed jar and a sunny window ledge. The shop has no fridge. Laila remembers what a cold fridge and a damp room did to the returned bars.", "provides": {} },
+    { "id": "shutter", "hotspot": { "x": 66.1, "y": 13.6, "w": 11.1, "h": 30 }, "title": "The shutter handle", "art": "shutter-handle", "text": "Brass, worn smooth by forty years of Dadu's hands. It is Laila's now.", "provides": {} },
+    { "id": "photo", "hotspot": { "x": 78.9, "y": 17.6, "w": 17.2, "h": 24.8 }, "title": "Dadu's photo", "art": "photo-shop", "text": "A sepia photo of Dadu in front of the open shutters, the day he opened the shop. The sign above him is blank.", "provides": {} }
+  ],
+  "steps": [
+    {
+      "id": "o1",
+      "type": "free-build",
+      "line": "o1",
+      "title": "Line 1: a bar for a child",
+      "prompt": "Rafiq Bhai's order is in the book. Set every row so the bar meets every part of the order, then make it.",
+      "say": "Rafiq Bhai: \"A bar for a child, Laila. Sweet, still chocolatey. And remember, I have no fridge in the shop.\"",
+      "params": {
+        "fields": [
+          { "key": "kind", "label": "Bar", "options": [ { "id": "dark", "name": "Dark" }, { "id": "milk", "name": "Milk" } ] },
+          { "key": "cacao", "label": "Cacao", "options": [ { "id": "40", "name": "40 parts", "n": 40 }, { "id": "55", "name": "55 parts", "n": 55 }, { "id": "65", "name": "65 parts", "n": 65 }, { "id": "90", "name": "90 parts", "n": 90 } ] },
+          { "key": "milkpowder", "label": "Milk powder", "options": [ { "id": "none", "name": "None", "pct": 0 }, { "id": "quarter", "name": "A quarter", "pct": 25 } ] },
+          { "key": "conche", "label": "Conche", "options": [ { "id": "3", "name": "3 hours", "hours": 3 }, { "id": "6", "name": "6 hours", "hours": 6 }, { "id": "11", "name": "11 hours", "hours": 11 } ] },
+          { "key": "tape", "label": "Tempering tape", "options": [ { "id": "dark", "name": "Red, blue, green: 45, 27, 31", "green": 31 }, { "id": "milk", "name": "Red, blue, milk tag: 45, 27, 29", "green": 29 } ] },
+          { "key": "keep", "label": "Keep it on", "options": [ { "id": "shelf", "name": "The cool shelf", "rule": "melts" }, { "id": "fridge", "name": "A fridge", "rule": "cold" }, { "id": "window", "name": "The sunny window", "rule": "warm" } ] },
+          { "key": "topping", "label": "Topping", "options": [ { "id": "none", "name": "None" }, { "id": "puffed", "name": "Puffed rice" }, { "id": "coconut", "name": "Toasted dry coconut" }, { "id": "nuts", "name": "A sprinkle of chopped nuts" }, { "id": "fresh", "name": "Fresh coconut" } ] }
+        ],
+        "idleInfo": "Pick one option in every row.",
+        "unfilled": "Pick an option in every row first.",
+        "extraOff": "(And something else in the order is off.)",
+        "goLabel": "Make the bar"
+      },
+      "answer": {
+        "constraints": [
+          { "field": "kind", "op": "eq", "value": "milk", "derive": "ch8.o1_kind", "clueId": "orders", "no": "That is not a milk bar, and the order says milk." },
+          { "field": "cacao", "op": "eq", "value": "40", "derive": "optionWith('n', ch8.milk_cacao)", "clueId": "cards", "no": "That is not the cacao in Dadu's milk bar. The recipe card has the number." },
+          { "field": "milkpowder", "op": "eq", "value": "quarter", "derive": "optionWith('pct', ch2.milk_pct)", "clueId": "ch2:tin", "no": "A milk bar needs the milk powder from Dadu's tin, a quarter of the bar." },
+          { "field": "conche", "op": "eq", "value": "6", "derive": "optionWith('hours', ceil((24 - ch1.shutters_pm + ch1.fajr_am) / ch2.conche_divisor))", "clueId": "ch2:note", "no": "Milk gets half the dark bar's night, rounded up. That is not it." },
+          { "field": "tape", "op": "eq", "value": "milk", "derive": "optionWith('green', ch1.milk_tag)", "clueId": "ch1:therm", "no": "Milk is tempered with the tag on Dadu's thermometer, not the green tape." },
+          { "field": "keep", "op": "eq", "value": "shelf", "derive": "optionWith('rule', ch3.cool_rule)", "clueId": "ch3:cool", "no": "With no fridge, a bar that melts goes on the cool shelf, not in the sun." }
+        ],
+        "example": { "kind": "milk", "cacao": "40", "milkpowder": "quarter", "conche": "6", "tape": "milk", "keep": "shelf", "topping": "none" }
+      },
+      "feedback": { "correct": "A milk bar, sweet and still chocolatey, tempered with the tag and kept on the cool shelf. Rafiq Bhai wraps it before you can say a word." },
+      "hints": [
+        "Read the order book in the Workshop, then Dadu's recipe cards. The Eid page and the monsoon page on the Memory shelf have the rest.",
+        "Milk bar, 40 cacao, a quarter milk powder, 6 hours of conche, the milk tag for tempering, and the cool shelf. Any topping works."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["orders", "cards", "ch2:tin", "ch2:note", "ch1:sign", "ch1:table", "ch1:therm", "ch3:cool"]
+    },
+    {
+      "id": "o2",
+      "type": "free-build",
+      "line": "o2",
+      "title": "Line 2: the darkest bar",
+      "prompt": "Nazma Apa's order is in the book. Set every row so the bar meets every part of the order, then make it.",
+      "say": "Nazma Apa: \"A gift for my nephew, and he hates sugar. As dark as you can make it. The shop gets hot in the afternoon, mind.\"",
+      "params": {
+        "fields": [
+          { "key": "kind", "label": "Bar", "options": [ { "id": "dark", "name": "Dark" }, { "id": "milk", "name": "Milk" } ] },
+          { "key": "cacao", "label": "Cacao", "options": [ { "id": "40", "name": "40 parts", "n": 40 }, { "id": "55", "name": "55 parts", "n": 55 }, { "id": "65", "name": "65 parts", "n": 65 }, { "id": "90", "name": "90 parts", "n": 90 } ] },
+          { "key": "milkpowder", "label": "Milk powder", "options": [ { "id": "none", "name": "None", "pct": 0 }, { "id": "quarter", "name": "A quarter", "pct": 25 } ] },
+          { "key": "conche", "label": "Conche", "options": [ { "id": "3", "name": "3 hours", "hours": 3 }, { "id": "6", "name": "6 hours", "hours": 6 }, { "id": "11", "name": "11 hours", "hours": 11 } ] },
+          { "key": "tape", "label": "Tempering tape", "options": [ { "id": "dark", "name": "Red, blue, green: 45, 27, 31", "green": 31 }, { "id": "milk", "name": "Red, blue, milk tag: 45, 27, 29", "green": 29 } ] },
+          { "key": "keep", "label": "Keep it on", "options": [ { "id": "shelf", "name": "The cool shelf", "rule": "melts" }, { "id": "fridge", "name": "A fridge", "rule": "cold" }, { "id": "window", "name": "The sunny window", "rule": "warm" } ] },
+          { "key": "topping", "label": "Topping", "options": [ { "id": "none", "name": "None" }, { "id": "puffed", "name": "Puffed rice" }, { "id": "coconut", "name": "Toasted dry coconut" }, { "id": "nuts", "name": "A sprinkle of chopped nuts" }, { "id": "fresh", "name": "Fresh coconut" } ] }
+        ],
+        "idleInfo": "Pick one option in every row.",
+        "unfilled": "Pick an option in every row first.",
+        "extraOff": "(And something else in the order is off.)",
+        "goLabel": "Make the bar"
+      },
+      "answer": {
+        "constraints": [
+          { "field": "kind", "op": "eq", "value": "dark", "derive": "ch8.o2_kind", "clueId": "orders", "no": "That is not a dark bar, and the order says dark." },
+          { "field": "cacao", "op": "gte", "value": "90", "derive": "optionWith('n', ch5.cacao_pct)", "clueId": "ch5:slip", "no": "That is not as dark as it gets. The wedding order on the Memory shelf had the darkest bar." },
+          { "field": "milkpowder", "op": "eq", "value": "none", "derive": "optionWith('pct', 0)", "clueId": "cards", "no": "A dark bar has no milk powder, and her nephew hates sugar." },
+          { "field": "conche", "op": "eq", "value": "11", "derive": "optionWith('hours', 24 - ch1.shutters_pm + ch1.fajr_am)", "clueId": "ch1:sign", "no": "A dark bar gets the whole night, shutters down to the first azaan. That is not it." },
+          { "field": "tape", "op": "eq", "value": "dark", "derive": "optionWith('green', ch1.tape_green)", "clueId": "ch1:therm", "no": "A dark bar is tempered with the green tape, not the milk tag." },
+          { "field": "keep", "op": "eq", "value": "shelf", "derive": "optionWith('rule', ch3.cool_rule)", "clueId": "ch3:cool", "no": "The shop gets hot in the afternoon. A bar that melts belongs on the cool shelf." }
+        ],
+        "example": { "kind": "dark", "cacao": "90", "milkpowder": "none", "conche": "11", "tape": "dark", "keep": "shelf", "topping": "none" }
+      },
+      "feedback": { "correct": "Dark 90, a whole night in the conche, kept on the cool shelf out of the afternoon heat. Nazma Apa tucks it into her bag like treasure." },
+      "hints": [
+        "The darkest bar Laila ever made was for a wedding. The slip is on the Memory shelf. A dark bar has no milk and follows the long night.",
+        "Dark, 90 cacao, no milk powder, 11 hours of conche, the green tape for tempering, and the cool shelf. Any topping works."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["orders", "cards", "ch5:slip", "ch1:sign", "ch1:table", "ch1:therm", "ch3:cool"]
+    },
+    {
+      "id": "o3",
+      "type": "free-build",
+      "line": "o3",
+      "title": "Line 3: the school fair",
+      "prompt": "Mishti's order is in the book. Set every row so the bar meets every part of the order, then make it.",
+      "say": "Mishti, holding a stack of paper tickets: \"Dark chocolate, like the first bar you made, but with a crunch on top. My teacher cannot have milk. And nothing wet!\"",
+      "params": {
+        "fields": [
+          { "key": "kind", "label": "Bar", "options": [ { "id": "dark", "name": "Dark" }, { "id": "milk", "name": "Milk" } ] },
+          { "key": "cacao", "label": "Cacao", "options": [ { "id": "40", "name": "40 parts", "n": 40 }, { "id": "55", "name": "55 parts", "n": 55 }, { "id": "65", "name": "65 parts", "n": 65 }, { "id": "90", "name": "90 parts", "n": 90 } ] },
+          { "key": "milkpowder", "label": "Milk powder", "options": [ { "id": "none", "name": "None", "pct": 0 }, { "id": "quarter", "name": "A quarter", "pct": 25 } ] },
+          { "key": "conche", "label": "Conche", "options": [ { "id": "3", "name": "3 hours", "hours": 3 }, { "id": "6", "name": "6 hours", "hours": 6 }, { "id": "11", "name": "11 hours", "hours": 11 } ] },
+          { "key": "tape", "label": "Tempering tape", "options": [ { "id": "dark", "name": "Red, blue, green: 45, 27, 31", "green": 31 }, { "id": "milk", "name": "Red, blue, milk tag: 45, 27, 29", "green": 29 } ] },
+          { "key": "keep", "label": "Keep it on", "options": [ { "id": "shelf", "name": "The cool shelf", "rule": "melts" }, { "id": "fridge", "name": "A fridge", "rule": "cold" }, { "id": "window", "name": "The sunny window", "rule": "warm" } ] },
+          { "key": "topping", "label": "Topping", "options": [ { "id": "none", "name": "None" }, { "id": "puffed", "name": "Puffed rice" }, { "id": "coconut", "name": "Toasted dry coconut" }, { "id": "nuts", "name": "A sprinkle of chopped nuts" }, { "id": "fresh", "name": "Fresh coconut" } ] }
+        ],
+        "idleInfo": "Pick one option in every row.",
+        "unfilled": "Pick an option in every row first.",
+        "extraOff": "(And something else in the order is off.)",
+        "goLabel": "Make the bar"
+      },
+      "answer": {
+        "constraints": [
+          { "field": "kind", "op": "eq", "value": "dark", "derive": "ch8.o3_kind", "clueId": "orders", "no": "That is not a dark bar, and Mishti asked for dark." },
+          { "field": "cacao", "op": "eq", "value": "65", "derive": "optionWith('n', ch1.cacao_pct)", "clueId": "ch1:slip", "no": "That is not the first bar. Mishti wants the one from Chapter 1, and the slip is on the Memory shelf." },
+          { "field": "milkpowder", "op": "eq", "value": "none", "derive": "optionWith('pct', 0)", "clueId": "cards", "no": "Her teacher cannot have milk, so no milk powder." },
+          { "field": "conche", "op": "eq", "value": "11", "derive": "optionWith('hours', 24 - ch1.shutters_pm + ch1.fajr_am)", "clueId": "ch1:sign", "no": "A dark bar gets the whole night, shutters down to the first azaan. That is not it." },
+          { "field": "tape", "op": "eq", "value": "dark", "derive": "optionWith('green', ch1.tape_green)", "clueId": "ch1:therm", "no": "A dark bar is tempered with the green tape, not the milk tag." },
+          { "field": "topping", "op": "in", "value": ["puffed", "coconut", "nuts"], "derive": "ch8.dry_toppings", "clueId": "toppings", "no": "Mishti asked for a dry, crunchy topping. Fresh coconut is wet, and wet things seize chocolate. No topping at all is not a crunch." }
+        ],
+        "example": { "kind": "dark", "cacao": "65", "milkpowder": "none", "conche": "11", "tape": "dark", "keep": "shelf", "topping": "puffed" }
+      },
+      "feedback": { "correct": "Dark 65, a whole night in the conche, and a crunch of puffed rice. Mishti counts her tickets twice and gives you one for free." },
+      "hints": [
+        "The first bar's slip is on the Memory shelf. The toppings shelf in the Workshop says which toppings are dry.",
+        "Dark, 65 cacao, no milk powder, 11 hours of conche, the green tape, and puffed rice, toasted dry coconut or a sprinkle of chopped nuts on top. Any shelf works."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["orders", "cards", "toppings", "ch1:slip", "ch1:sign", "ch1:table", "ch1:therm"]
+    },
+    {
+      "id": "name",
+      "type": "name-wrapper",
+      "line": "name",
+      "title": "Line 4: the shop's own bar",
+      "prompt": "Every shop needs a bar with its own name. Type a name, pick a wrapper, and see it printed. There is no wrong answer here.",
+      "say": "The sign above Dadu in the old photo is blank. Maybe he was waiting for a name. Maybe he was waiting for me.",
+      "params": {
+        "nameLabel": "Bar name",
+        "placeholder": "For example, Dadu's Dark",
+        "maxLength": 24,
+        "wrappers": [
+          { "id": "dark", "name": "Dark pack", "art": "wrapper-dark" },
+          { "id": "milk", "name": "Milk pack", "art": "wrapper-milk" },
+          { "id": "dark90", "name": "Black pack", "art": "wrapper-dark90" }
+        ],
+        "goLabel": "Print the wrapper",
+        "emptyName": "Give the bar a name first. Even one word is enough.",
+        "preview": "Your bar"
+      },
+      "answer": { "any": true, "derive": "ui" },
+      "feedback": { "correct": "\"{name}\". It looks right on the wrapper. It looks like it was always going to be called that." },
+      "hints": ["Type any name you like, pick a wrapper, and press the button. Nothing here is scored."],
+      "requiresClues": []
+    },
+    {
+      "id": "shutter",
+      "type": "tap-meter",
+      "line": "shutter",
+      "title": "Last line: lift the shutter",
+      "prompt": "Tap the handle eight times to lift the shutter.",
+      "say": "Forty years of Dadu's hands on this handle. Now mine.",
+      "beat": { "who": "Mishti", "text": "It is so loud! Everyone on the lane will hear it!", "delay": 3200 },
+      "params": { "variant": "crank", "label": "Tap to lift", "effect": "husk" },
+      "answer": { "count": 8, "derive": "ui" },
+      "feedback": { "correct": "The shutter rattles all the way up. Morning light pours across the bench, and the lane is already full of people." },
+      "hints": ["Just keep tapping the handle."],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-yours",
+    "talk": [
+      ["Rafiq", "\"Look at that line outside. Your Dadu would have wept, Laila beta. And then asked for the order book.\""],
+      ["Kobir", "\"The best sack first, apa, as I promised. It is at the door.\""],
+      ["Laila", "On the last page of the notebook there is one blank line. I know what goes on it."]
+    ],
+    "recipeTitle": "Laila's shop, rebuilt:",
+    "recipe": [
+      "Milk, 40 cacao, a quarter milk powder, 6 hours, the milk tag",
+      "Dark 90, no milk, 11 hours, the green tape, the cool shelf",
+      "Dark 65, no milk, 11 hours, a dry and crunchy topping",
+      "Your own bar, with its own name"
+    ],
+    "realFact": "In real life, a chocolate maker makes every choice you made today: the bean, the roast, the time, the temperature, the shelf. The shop's name and wrapper tell the story of all of them.",
+    "next": "The end of the notebook. The beginning of the shop.",
+    "again": "Play chapter 8 again"
+  }
+}

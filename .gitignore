@@ -1,0 +1,8 @@
+node_modules/
+dist/
+screenshots/
+# client originals and spec stay out of the public repository
+source-assets/
+Dadu's Notebook Game Spec for Claude Code.docx
+Dadu's Notebook.html
+.claude/

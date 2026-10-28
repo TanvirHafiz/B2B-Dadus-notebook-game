@@ -1,0 +1,638 @@
+{
+  "id": "ch7",
+  "title": "Tasting Night",
+  "eyebrow": "Bean-to-Bar · Chapter 7",
+  "gameTitle": "Dadu's Notebook",
+  "opening": "Three regulars, three opinions. Dadu's tasting cards are on the table.",
+  "cast": {
+    "Laila": {
+      "name": "Laila",
+      "portrait": "laila"
+    },
+    "Rafiq": {
+      "name": "Rafiq Bhai",
+      "portrait": "rafiq",
+      "side": "right"
+    },
+    "Mishti": {
+      "name": "Mishti",
+      "portrait": "mishti",
+      "side": "right"
+    },
+    "Hint": {
+      "name": "Dadu's note",
+      "portrait": "dadu"
+    },
+    "Nazma": {
+      "name": "Nazma Apa",
+      "portrait": "nazma",
+      "side": "right"
+    },
+    "Jamal": {
+      "name": "Jamal Chacha",
+      "portrait": "jamal",
+      "side": "right"
+    },
+    "Shumi": {
+      "name": "Shumi",
+      "portrait": "shumi",
+      "side": "right"
+    }
+  },
+  "intro": [
+    {
+      "art": "shutter-glow",
+      "h": "Tasting night.",
+      "p": "Once a month Dadu kept the shop open late for a few regulars. They tasted, argued and went home happy. Rafiq Bhai wants the tradition back."
+    },
+    {
+      "art": "shutter-open",
+      "cast": [
+        "Laila",
+        "Rafiq"
+      ],
+      "talk": [
+        [
+          "Rafiq",
+          "Laila beta! Remember tasting night? Three regulars are coming on Thursday. They each have an opinion, and they never agree."
+        ],
+        [
+          "Laila",
+          "I remember the noise. I do not remember what any of them asked for."
+        ],
+        [
+          "Rafiq",
+          "Easy. Each one asks for a taste, and you make the bar that tastes that way."
+        ],
+        [
+          "Laila",
+          "A taste is not a recipe. I need to know what makes a bar fruity, or bitter, or mild."
+        ],
+        [
+          "Rafiq",
+          "Dadu kept tasting cards, no? One card for each thing he could change."
+        ],
+        [
+          "Laila",
+          "Then I will read the cards. One at a time."
+        ]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "The tasting page",
+    "lines": [
+      {
+        "id": "intro",
+        "text": "A bar tastes the way you set it. Roast, conche and cacao each change the taste. [[torn:…the cards say how…]]"
+      },
+      {
+        "id": "nazma",
+        "text": "Nazma Apa: fruity, but not sour. [[torn:…not the all-night kind…]]",
+        "note": "light roast, 6 hours"
+      },
+      {
+        "id": "jamal",
+        "text": "Jamal Chacha: bitter and strong, but smooth. [[blur:How bitter?]]",
+        "note": "90 percent, 11 hours"
+      },
+      {
+        "id": "shumi",
+        "text": "Shumi: mild and sweet, with a toasted taste.",
+        "note": "55 percent, medium roast"
+      },
+      {
+        "id": "mold",
+        "text": "Pour the samples into the moulds. Tap the tray to knock the air out."
+      }
+    ]
+  },
+  "workshop": {
+    "scene": "assets/art/scene-ch7.webp",
+    "sceneAlt": "Dadu's workshop set for a tasting night, with cards and little cups on the table. Tap the glowing objects to remember.",
+    "hintLine": "Tap the glowing spots. Dadu left clues all over the workshop.",
+    "memoEyebrow": "Laila remembers"
+  },
+  "clues": [
+    {
+      "id": "roast",
+      "hotspot": {
+        "x": 7.1,
+        "y": 44.8,
+        "w": 15.6,
+        "h": 28
+      },
+      "title": "Dadu's roast card",
+      "art": "card-roast",
+      "text": "Three roasts, three tastes. Light: fruity and bright, with a little sour. Medium: like toasted bread. Dark: smoky and bitter.",
+      "provides": {
+        "ch7.roast_fruity": "light",
+        "ch7.roast_toasty": "medium",
+        "ch7.roast_bitter": "dark"
+      },
+      "artText": {
+        "alt": "Dadu's roast card. Light roast: fruity, a little sour. Medium roast: toasted bread. Dark roast: smoky, bitter.",
+        "title": "Roast",
+        "l1": "Light",
+        "v1": "fruity, a little sour",
+        "l2": "Medium",
+        "v2": "toasted bread",
+        "l3": "Dark",
+        "v3": "smoky, bitter"
+      }
+    },
+    {
+      "id": "conche",
+      "hotspot": {
+        "x": 26.7,
+        "y": 34.3,
+        "w": 12.9,
+        "h": 23.1
+      },
+      "title": "Dadu's conche card",
+      "art": "card-conche",
+      "text": "Three lengths, three tastes. 3 hours: sharp and sour. 6 hours: the sour fades, still lively. 11 hours: smooth and mellow.",
+      "provides": {
+        "ch7.conche_sharp": "3",
+        "ch7.conche_lively": "6",
+        "ch7.conche_mellow": "11"
+      },
+      "artText": {
+        "alt": "Dadu's conche card. 3 hours: sharp, sour. 6 hours: lively, the sour fades. 11 hours: smooth, mellow.",
+        "title": "Conche",
+        "l1": "3 hours",
+        "v1": "sharp, sour",
+        "l2": "6 hours",
+        "v2": "lively, sour fades",
+        "l3": "11 hours",
+        "v3": "smooth, mellow"
+      }
+    },
+    {
+      "id": "cacao",
+      "hotspot": {
+        "x": 47.5,
+        "y": 42.9,
+        "w": 14.6,
+        "h": 16.8
+      },
+      "title": "Dadu's cacao card",
+      "art": "card-cacao",
+      "text": "Three strengths, three tastes. 55 percent: mild and sweet. 70 percent: balanced. 90 percent: bitter and strong.",
+      "provides": {
+        "ch7.cacao_mild": "55",
+        "ch7.cacao_even": "70",
+        "ch7.cacao_strong": "90"
+      },
+      "artText": {
+        "alt": "Dadu's cacao card. 55 percent: mild, sweet. 70 percent: balanced. 90 percent: bitter, strong.",
+        "title": "Cacao",
+        "l1": "55 percent",
+        "v1": "mild, sweet",
+        "l2": "70 percent",
+        "v2": "balanced",
+        "l3": "90 percent",
+        "v3": "bitter, strong"
+      }
+    },
+    {
+      "id": "spoons",
+      "hotspot": {
+        "x": 62.5,
+        "y": 69,
+        "w": 14.6,
+        "h": 14.9
+      },
+      "title": "The tasting spoons",
+      "art": "spoons",
+      "text": "Small wooden spoons, one for each regular. Dadu never let anyone taste with a metal one.",
+      "provides": {},
+      "artText": {
+        "alt": "Three small wooden tasting spoons"
+      }
+    },
+    {
+      "id": "book",
+      "hotspot": {
+        "x": 77.5,
+        "y": 67.9,
+        "w": 20.4,
+        "h": 18.7
+      },
+      "title": "The regulars' book",
+      "art": "guest-book",
+      "text": "Names and favourites in Dadu's pencil. Nazma Apa, always a sour face. Jamal Chacha, never any sugar. Shumi, only the sweet ones.",
+      "provides": {},
+      "artText": {
+        "alt": "An open book with three names: Nazma Apa, sour face; Jamal Chacha, no sugar; Shumi, the sweet ones",
+        "t1": "Nazma Apa: sour face",
+        "t2": "Jamal Chacha: no sugar",
+        "t3": "Shumi: sweet ones"
+      }
+    },
+    {
+      "id": "photo",
+      "hotspot": {
+        "x": 80.8,
+        "y": 5.6,
+        "w": 15.6,
+        "h": 31.7
+      },
+      "title": "An old photo",
+      "art": "photo-tasting",
+      "text": "A faded brown photo of a tasting night. Dadu stands at the back, holding a spoon up to the light.",
+      "provides": {},
+      "artText": {
+        "alt": "A faded brown photo of a tasting night, with Dadu at the back holding a spoon up to the light"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "nazma",
+      "type": "match-notes",
+      "line": "nazma",
+      "title": "Line 1: Nazma Apa",
+      "prompt": "Nazma Apa has asked for a taste. Pick a setting in each row, then make the sample.",
+      "say": "Nazma Apa, retired schoolteacher: \"Fruity, please, but not sour. And not the all-night kind. I like a lively chocolate.\"",
+      "params": {
+        "settings": [
+          {
+            "key": "roast",
+            "label": "Roast",
+            "options": [
+              {
+                "id": "light",
+                "name": "Light roast",
+                "taste": "fruity and bright, with a little sour"
+              },
+              {
+                "id": "medium",
+                "name": "Medium roast",
+                "taste": "like toasted bread"
+              },
+              {
+                "id": "dark",
+                "name": "Dark roast",
+                "taste": "smoky and bitter"
+              }
+            ]
+          },
+          {
+            "key": "conche",
+            "label": "Conche",
+            "options": [
+              {
+                "id": "3",
+                "name": "3 hours",
+                "taste": "sharp and sour"
+              },
+              {
+                "id": "6",
+                "name": "6 hours",
+                "taste": "lively, with the sour faded"
+              },
+              {
+                "id": "11",
+                "name": "11 hours",
+                "taste": "smooth and mellow"
+              }
+            ]
+          },
+          {
+            "key": "cacao",
+            "label": "Cacao",
+            "options": [
+              {
+                "id": "55",
+                "name": "55 percent",
+                "taste": "mild and sweet"
+              },
+              {
+                "id": "70",
+                "name": "70 percent",
+                "taste": "balanced"
+              },
+              {
+                "id": "90",
+                "name": "90 percent",
+                "taste": "bitter and strong"
+              }
+            ]
+          }
+        ],
+        "needs": {
+          "roast": "fruity",
+          "conche": "not sour, but still lively"
+        },
+        "free": {
+          "cacao": "Nazma Apa has no opinion about cacao, so any choice works."
+        },
+        "wrong": "{label}: that tastes {taste}. {customer} asked for something {need}.",
+        "unfilled": "Pick a setting in every row first.",
+        "goLabel": "Make the sample",
+        "extraOff": "(And another setting is off.)",
+        "customer": "Nazma Apa"
+      },
+      "answer": {
+        "settings": {
+          "roast": "light",
+          "conche": "6",
+          "cacao": null
+        },
+        "derive": {
+          "roast": "ch7.roast_fruity",
+          "conche": "ch7.conche_lively"
+        }
+      },
+      "feedback": {
+        "correct": "Nazma Apa tastes it and her face stays calm. \"Fruity, and not one bit sour. Lively, like I asked.\""
+      },
+      "hints": [
+        "Each of Dadu's cards in the Workshop covers one setting. Nazma Apa's two words match two different cards.",
+        "Light roast tastes fruity. A 6 hour conche fades the sour and stays lively. Cacao can be anything."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "roast",
+        "conche"
+      ]
+    },
+    {
+      "id": "jamal",
+      "type": "match-notes",
+      "line": "jamal",
+      "title": "Line 2: Jamal Chacha",
+      "prompt": "Jamal Chacha wants something different. Pick a setting in each row, then make the sample.",
+      "say": "Jamal Chacha, who runs the rickshaw garage: \"Bitter and strong, please, but smooth. I have no patience for rough.\"",
+      "params": {
+        "settings": [
+          {
+            "key": "roast",
+            "label": "Roast",
+            "options": [
+              {
+                "id": "light",
+                "name": "Light roast",
+                "taste": "fruity and bright, with a little sour"
+              },
+              {
+                "id": "medium",
+                "name": "Medium roast",
+                "taste": "like toasted bread"
+              },
+              {
+                "id": "dark",
+                "name": "Dark roast",
+                "taste": "smoky and bitter"
+              }
+            ]
+          },
+          {
+            "key": "conche",
+            "label": "Conche",
+            "options": [
+              {
+                "id": "3",
+                "name": "3 hours",
+                "taste": "sharp and sour"
+              },
+              {
+                "id": "6",
+                "name": "6 hours",
+                "taste": "lively, with the sour faded"
+              },
+              {
+                "id": "11",
+                "name": "11 hours",
+                "taste": "smooth and mellow"
+              }
+            ]
+          },
+          {
+            "key": "cacao",
+            "label": "Cacao",
+            "options": [
+              {
+                "id": "55",
+                "name": "55 percent",
+                "taste": "mild and sweet"
+              },
+              {
+                "id": "70",
+                "name": "70 percent",
+                "taste": "balanced"
+              },
+              {
+                "id": "90",
+                "name": "90 percent",
+                "taste": "bitter and strong"
+              }
+            ]
+          }
+        ],
+        "needs": {
+          "cacao": "bitter and strong",
+          "conche": "smooth"
+        },
+        "free": {
+          "roast": "Jamal Chacha has no opinion about roast, so any choice works."
+        },
+        "wrong": "{label}: that tastes {taste}. {customer} asked for something {need}.",
+        "unfilled": "Pick a setting in every row first.",
+        "goLabel": "Make the sample",
+        "extraOff": "(And another setting is off.)",
+        "customer": "Jamal Chacha"
+      },
+      "answer": {
+        "settings": {
+          "roast": null,
+          "conche": "11",
+          "cacao": "90"
+        },
+        "derive": {
+          "conche": "ch7.conche_mellow",
+          "cacao": "ch7.cacao_strong"
+        }
+      },
+      "feedback": {
+        "correct": "Jamal Chacha closes his eyes. \"Bitter, and not one rough edge. This one I will carry home.\""
+      },
+      "hints": [
+        "Two cards again, but different ones from the last customer. Look for the words bitter and smooth.",
+        "90 percent cacao is bitter and strong. An 11 hour conche is smooth and mellow. Roast can be anything."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "conche",
+        "cacao"
+      ]
+    },
+    {
+      "id": "shumi",
+      "type": "match-notes",
+      "line": "shumi",
+      "title": "Line 3: Shumi",
+      "prompt": "Shumi is the last regular. Pick a setting in each row, then make the sample.",
+      "say": "Shumi, a university student: \"Mild and sweet, please. But I want it to taste toasted, like fresh bread.\"",
+      "params": {
+        "settings": [
+          {
+            "key": "roast",
+            "label": "Roast",
+            "options": [
+              {
+                "id": "light",
+                "name": "Light roast",
+                "taste": "fruity and bright, with a little sour"
+              },
+              {
+                "id": "medium",
+                "name": "Medium roast",
+                "taste": "like toasted bread"
+              },
+              {
+                "id": "dark",
+                "name": "Dark roast",
+                "taste": "smoky and bitter"
+              }
+            ]
+          },
+          {
+            "key": "conche",
+            "label": "Conche",
+            "options": [
+              {
+                "id": "3",
+                "name": "3 hours",
+                "taste": "sharp and sour"
+              },
+              {
+                "id": "6",
+                "name": "6 hours",
+                "taste": "lively, with the sour faded"
+              },
+              {
+                "id": "11",
+                "name": "11 hours",
+                "taste": "smooth and mellow"
+              }
+            ]
+          },
+          {
+            "key": "cacao",
+            "label": "Cacao",
+            "options": [
+              {
+                "id": "55",
+                "name": "55 percent",
+                "taste": "mild and sweet"
+              },
+              {
+                "id": "70",
+                "name": "70 percent",
+                "taste": "balanced"
+              },
+              {
+                "id": "90",
+                "name": "90 percent",
+                "taste": "bitter and strong"
+              }
+            ]
+          }
+        ],
+        "needs": {
+          "cacao": "mild and sweet",
+          "roast": "toasted"
+        },
+        "free": {
+          "conche": "Shumi has no opinion about conching, so any choice works."
+        },
+        "wrong": "{label}: that tastes {taste}. {customer} asked for something {need}.",
+        "unfilled": "Pick a setting in every row first.",
+        "goLabel": "Make the sample",
+        "extraOff": "(And another setting is off.)",
+        "customer": "Shumi"
+      },
+      "answer": {
+        "settings": {
+          "roast": "medium",
+          "conche": null,
+          "cacao": "55"
+        },
+        "derive": {
+          "roast": "ch7.roast_toasty",
+          "cacao": "ch7.cacao_mild"
+        }
+      },
+      "feedback": {
+        "correct": "Shumi takes a second bite before she says anything. \"Sweet, and still toasty. Can I take the rest to the library?\""
+      },
+      "hints": [
+        "Roast and cacao this time. Which card talks about toasted bread, and which about mild and sweet?",
+        "Medium roast tastes like toasted bread. 55 percent cacao is mild and sweet. Conche can be anything."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "roast",
+        "cacao"
+      ]
+    },
+    {
+      "id": "mold",
+      "type": "tap-meter",
+      "line": "mold",
+      "title": "Last line: mould",
+      "prompt": "Three samples are ready. Tap the tray six times to knock the air out.",
+      "say": "Pour the samples, then knock the air out.",
+      "params": {
+        "variant": "tray",
+        "label": "Tap the tray",
+        "effect": "bubbles"
+      },
+      "answer": {
+        "count": 6,
+        "derive": "ui"
+      },
+      "feedback": {
+        "correct": "Three small bars, three different tastes, all from the same three settings."
+      },
+      "hints": [
+        "Just tap the tray."
+      ],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "tasting-cups",
+    "talk": [
+      [
+        "Nazma",
+        "\"Fruity and lively. Dadu would have given you a nod.\""
+      ],
+      [
+        "Jamal",
+        "\"Bitter and smooth. Do you make this every week?\""
+      ],
+      [
+        "Laila",
+        "Only a month ago I did not know what a roast did. Tonight I tasted it before I made it."
+      ]
+    ],
+    "recipeTitle": "Dadu's tasting page, rebuilt:",
+    "recipe": [
+      "Fruity, not sour: light roast, 6 hour conche",
+      "Bitter, but smooth: 90 percent cacao, 11 hour conche",
+      "Mild and sweet, toasted: 55 percent cacao, medium roast",
+      "Roast, conche and cacao each change the taste"
+    ],
+    "realFact": "In real life, roast, conching time and cacao work together to shape flavour, and makers tune them as a set. The words fruity, nutty and bitter are how tasters describe the result.",
+    "next": "Chapter 8: Opening Day.",
+    "again": "Play chapter 7 again",
+    "artText": {
+      "alt": "Three small cups of chocolate on a tray"
+    }
+  }
+}

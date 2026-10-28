@@ -1,0 +1,165 @@
+{
+  "_status": "DRAFT for Tanvir's approval. Not wired into the game. All numbers are the spec's, pending the chocolatier. Hotspot positions are placeholders until the Chapter 2 scene exists.",
+  "id": "ch2",
+  "title": "Eid Milk",
+  "eyebrow": "Bean-to-Bar · Chapter 2",
+  "opening": "Eid is in a week. The notebook has a milk page, and it is much more badly stained.",
+  "intro": [
+    { "art": "shutter-glow", "h": "One week to Eid.", "p": "The children in the lane have been asking for something sweeter than Dadu's dark bar." },
+    {
+      "art": "shutter-open",
+      "cast": ["Laila", "Rafiq"],
+      "talk": [
+        ["Rafiq", "Laila beta! The dark bar was a hit, but the children want something sweeter for Eid."],
+        ["Laila", "Sweeter? Dadu made a milk bar too. I think."],
+        ["Rafiq", "Sweet, but still chocolatey, mind you. Not just sugar with a brown colour."],
+        ["Laila", "Then I need to find out how much cacao, how much sugar and how much milk."],
+        ["Rafiq", "I have written it all on an order slip. Do not lose it, beta."],
+        ["Laila", "Fine. The milk page is stained again. I will start with a taste test."]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "Milk chocolate · 1 kg",
+    "lines": [
+      { "id": "taste", "text": "Taste the two trial bars. Keep the one that is sweet, but still tastes of [[blur:chocolate]]." },
+      { "id": "mix", "text": "{blank} the cacao, the sugar and the milk powder. [[torn:…a quarter of the bar is milk, and the sugar is whatever is left.]]", "note": "40 cacao, 35 sugar, 25 milk powder" },
+      { "id": "conche", "text": "Conche it. [[q:Milk: half the night, and round up. Milk forgives nothing.]]", "note": "6 hours" },
+      { "id": "temper", "text": "Temper it cooler than the dark bar. Melt to the red tape. Cool to the blue. Bring it back up to the milk tag.", "note": "45 / 27 / 29 °C" },
+      { "id": "mold", "text": "Pour into the moulds. Tap the tray to knock the air out." }
+    ]
+  },
+  "clues": [
+    { "id": "slip", "hotspot": { "x": 59.4, "y": 66.4, "w": 11.7, "h": 12.0 }, "title": "Rafiq Bhai's Eid order", "art": "slip-eid", "text": "Sweet but still chocolatey, please. For the children. Eid is in a week.", "provides": { "ch2.brief": "sweet but still chocolatey" } },
+    { "id": "note", "hotspot": { "x": 7.8, "y": 44.8, "w": 14.4, "h": 30.4 }, "title": "Dadu's milk note", "art": "note-milk", "text": "\"Milk: half the night, and round up. Milk forgives nothing.\" He wrote it in pencil on the back of a flour sack.", "provides": { "ch2.conche_divisor": 2, "ch2.conche_rounding": "up" } },
+    { "id": "tin", "hotspot": { "x": 26.1, "y": 31.2, "w": 11.7, "h": 17.6 }, "title": "The milk powder tin", "art": "tin-milk", "text": "The label is in Dadu's handwriting: \"Milk powder. A quarter of every milk bar.\"", "provides": { "ch2.milk_pct": 25 } },
+    { "id": "lantern", "hotspot": { "x": 40.6, "y": 34.4, "w": 17.8, "h": 14.4 }, "title": "The Eid lantern", "art": "lantern", "text": "Dadu hung this up every year, a week before Eid. The workshop always smelled of warm milk after that.", "provides": {} },
+    { "id": "tea", "hotspot": { "x": 66.1, "y": 13.6, "w": 11.1, "h": 58.4 }, "title": "The tea tin", "art": "tea", "text": "Half full. He drank his tea before dawn, right after the first azaan.", "provides": {} }
+  ],
+  "memoryRefs": ["ch1:sign", "ch1:table", "ch1:therm"],
+  "steps": [
+    {
+      "id": "taste",
+      "type": "compare-two",
+      "line": "taste",
+      "title": "Taste test",
+      "prompt": "Taste both trial bars. Which one fits the order slip?",
+      "say": "Two trial bars. The order slip says what the children want.",
+      "params": {
+        "briefClue": "slip",
+        "options": [
+          { "id": "a", "label": "Bar A", "cacao": 30, "tag": "too sweet, thin", "sense": "Very sweet and creamy. You taste milk and sugar first, and the chocolate fades fast." },
+          { "id": "b", "label": "Bar B", "cacao": 40, "tag": "sweet but still chocolatey", "sense": "Sweet and creamy, with a clear cocoa taste that stays on your tongue." }
+        ],
+        "goLabel": "Keep this bar"
+      },
+      "answer": { "choice": "b", "derive": "optionWith('tag', ch2.brief)" },
+      "provides": { "ch2.cacao_pct": 40 },
+      "feedback": {
+        "correct": "Bar B. Sweet, but the chocolate is still in charge.",
+        "wrong": "Bar A is all milk and sugar. The slip says still chocolatey. Try the other one."
+      },
+      "hints": [
+        "Read the order slip in the Workshop. What do the children want?",
+        "Bar B is sweet but still tastes of chocolate. That is the one on the slip."
+      ],
+      "requiresClues": ["slip"]
+    },
+    {
+      "id": "mix",
+      "type": "ratio-slider",
+      "line": "mix",
+      "title": "Line 1: the mix",
+      "prompt": "One batch is 1 kg. Set how much is cacao, how much is milk powder and how much is sugar.",
+      "say": "The cacao comes from the bar I kept. The milk tin should say how much milk. Sugar is the rest.",
+      "params": { "total": 100, "unit": "parts", "parts": ["Cacao", "Sugar", "Milk powder"], "goLabel": "Mix it" },
+      "answer": { "parts": [40, 35, 25], "tolerance": 2, "derive": ["ch2.cacao_pct", "100 - ch2.cacao_pct - ch2.milk_pct", "ch2.milk_pct"] },
+      "feedback": {
+        "correct": "Forty, thirty-five, twenty-five. Creamy and sweet, and still properly chocolate.",
+        "cacaoHigh": "Hmm, this is nearly a dark bar again. The children will say it is bitter.",
+        "cacaoLow": "This is mostly sugar and milk. It will taste thin, like Bar A.",
+        "milkHigh": "Too much milk. It will be soft and pale, and the cocoa taste will vanish.",
+        "milkLow": "Not enough milk. It will not taste creamy enough to be a milk bar."
+      },
+      "hints": [
+        "You kept a bar at the taste test, and the milk tin in the Workshop has a label.",
+        "Cacao 40, milk powder 25, and the sugar is what is left: 35."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["step:taste", "tin"]
+    },
+    {
+      "id": "conche",
+      "type": "time-slider",
+      "line": "conche",
+      "title": "Line 2: conche",
+      "prompt": "Set how many hours the conche should turn.",
+      "say": "Dadu wrote a rule for milk. It uses the same night as the dark bar.",
+      "params": { "min": 1, "max": 24, "step": 1, "start": 11, "unit": "hour", "sliderLabel": "Hours of conching", "goLabel": "Start the conche" },
+      "answer": { "value": 6, "tolerance": 0, "near": 1, "derive": "ceil((24 - ch1.shutters_pm + ch1.fajr_am) / ch2.conche_divisor)" },
+      "feedback": {
+        "correct": "Six hours. Half of eleven is five and a half, and Dadu said round up.",
+        "near": "Close, but Dadu was exact. Half the dark bar's night, then round up.",
+        "low": "It is still gritty. Even milk needs more than that.",
+        "high": "Milk forgives nothing. It has gone dull and scorched at that length."
+      },
+      "hints": [
+        "Dadu's milk note says how long, compared with the dark bar. Check the Memory shelf for the dark bar's hours.",
+        "The dark bar ran 11 hours. Half is 5 and a half, and round up makes 6."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": ["note", "ch1:sign", "ch1:table"]
+    },
+    {
+      "id": "temper",
+      "type": "multi-temp",
+      "line": "temper",
+      "title": "Line 3: temper",
+      "prompt": "Set the three temperatures. Milk is worked cooler than dark.",
+      "say": "Red, blue, and the tag on Dadu's thermometer. The tag is for milk bars.",
+      "params": {
+        "min": 20, "max": 55, "step": 1, "start": 36, "goLabel": "Run the curve", "extraOff": "(And one more is off.)",
+        "rows": [
+          { "key": "melt", "label": "Melt", "low": "Too cool to melt every crystal. The bar would come out streaky.", "high": "Too hot. Milk scorches easily." },
+          { "key": "cool", "label": "Cool", "low": "Too cold. It thickens before it can set properly.", "high": "Still too warm. The good crystals cannot form yet." },
+          { "key": "rewarm", "label": "Rewarm", "low": "Too cool. It will set thick and dull.", "high": "Too warm for milk. It undoes the crystals and can scorch." }
+        ]
+      },
+      "answer": { "values": [45, 27, 29], "tolerance": 1, "derive": ["ch1.tape_red", "ch1.tape_blue", "ch1.milk_tag"] },
+      "feedback": { "correct": "Forty-five, twenty-seven, twenty-nine. Glossy, and nothing scorched." },
+      "hints": [
+        "The thermometer from the dark bar has red and blue tape, and a little tag for milk bars. Open the Memory shelf.",
+        "Red is 45, blue is 27, and the milk tag says 29."
+      ],
+      "requiresClues": ["ch1:therm"]
+    },
+    {
+      "id": "mold",
+      "type": "tap-meter",
+      "line": "mold",
+      "title": "Last line: mould",
+      "prompt": "The chocolate is poured. Tap the tray six times to knock the air out.",
+      "say": "Pour, then knock the air out.",
+      "params": { "variant": "tray", "label": "Tap the tray", "effect": "bubbles" },
+      "answer": { "count": 6, "derive": "ui" },
+      "feedback": { "correct": "The air is out. Now it just has to set." },
+      "hints": ["Just tap the tray."],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-milk",
+    "talk": [
+      ["Rafiq", "\"Sweet, and still chocolate. The children will not leave you alone.\""],
+      ["Mishti", "Can we have it every Eid?"],
+      ["Laila", "Every Eid. I think Dadu would like that."]
+    ],
+    "recipeTitle": "Dadu's Eid milk bar, rebuilt:",
+    "recipe": ["40 cacao, 35 sugar, 25 milk powder", "Conche 6 hours, half the night rounded up", "Temper 45, then 27, then 29 °C", "Mould and tap out the air"],
+    "realFact": "In real life, milk scorches easily, so milk chocolate is worked cooler. Many makers conche milk chocolate for as long as dark, just at a lower temperature. Half the time was Dadu's own house rule.",
+    "next": "Chapter 3: Monsoon Leak.",
+    "again": "Play chapter 2 again"
+  }
+}
