@@ -1,0 +1,553 @@
+{
+  "id": "ch4",
+  "title": "Bean Delivery",
+  "eyebrow": "Bean-to-Bar · Chapter 4",
+  "gameTitle": "Dadu's Notebook",
+  "opening": "A sack of beans has arrived at the door. Dadu never trusted a sack he had not tested.",
+  "cast": {
+    "Laila": {
+      "name": "Laila",
+      "portrait": "laila"
+    },
+    "Rafiq": {
+      "name": "Rafiq Bhai",
+      "portrait": "rafiq",
+      "side": "right"
+    },
+    "Mishti": {
+      "name": "Mishti",
+      "portrait": "mishti",
+      "side": "right"
+    },
+    "Hint": {
+      "name": "Dadu's note",
+      "portrait": "dadu"
+    },
+    "Kobir": {
+      "name": "Kobir",
+      "portrait": "kobir",
+      "side": "right"
+    }
+  },
+  "intro": [
+    {
+      "art": "shutter-glow",
+      "h": "Fresh beans.",
+      "p": "A farmer has come all the way to the workshop with a sack of cacao beans on his shoulder."
+    },
+    {
+      "art": "shutter-open",
+      "cast": [
+        "Laila",
+        "Kobir"
+      ],
+      "talk": [
+        [
+          "Kobir",
+          "Assalamu alaikum, apa. I used to bring your grandfather his beans every year."
+        ],
+        [
+          "Laila",
+          "Wa alaikum assalam. I am Laila. I am sorry, he is not here anymore."
+        ],
+        [
+          "Kobir",
+          "I know. I am sorry. His sack is still his sack, though. Will you take it?"
+        ],
+        [
+          "Laila",
+          "I do not know yet. How do I tell good beans from bad ones?"
+        ],
+        [
+          "Kobir",
+          "Cut them open and look inside. Your grandfather had a card for it."
+        ],
+        [
+          "Laila",
+          "Then I will check every bean, and smell the sacks, before I pay."
+        ]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "The bean page",
+    "lines": [
+      {
+        "id": "farm1",
+        "text": "{blank} the pods to get the wet beans out.",
+        "blank": 0
+      },
+      {
+        "id": "farm2",
+        "text": "{blank} the beans in heaps for days, so the flavour builds.",
+        "blank": 1
+      },
+      {
+        "id": "farm3",
+        "text": "{blank} the beans in the sun, on mats.",
+        "blank": 2
+      },
+      {
+        "id": "farm4",
+        "text": "{blank} the dry beans into sacks.",
+        "blank": 3
+      },
+      {
+        "id": "cut",
+        "text": "Cut a handful open and look inside. [[torn:…good beans are brown, with open cracks…]]",
+        "note": "keep the brown, cracked ones"
+      },
+      {
+        "id": "smell1",
+        "text": "Smell the first two sacks. [[q:A good sack smells of mild vinegar and fruit.]]",
+        "note": "mild vinegar and fruit"
+      },
+      {
+        "id": "smell2",
+        "text": "Smell the next two. Smoke and sharp ammonia are both bad signs.",
+        "note": "mild vinegar and fruit"
+      }
+    ]
+  },
+  "workshop": {
+    "scene": "assets/art/scene-ch4.webp",
+    "sceneAlt": "Dadu's workshop with a sack of beans delivered. Tap the glowing objects to remember.",
+    "hintLine": "Tap the glowing spots. Dadu left clues all over the workshop.",
+    "memoEyebrow": "Laila remembers"
+  },
+  "clues": [
+    {
+      "id": "farmnote",
+      "hotspot": {
+        "x": 3.1,
+        "y": 18.7,
+        "w": 10.4,
+        "h": 18.7
+      },
+      "title": "Kobir's note",
+      "art": "note-farm",
+      "text": "\"After the pods are cut, the beans sit in heaps to ferment. Then we dry them in the sun. Last, we bag them.\"",
+      "provides": {
+        "ch4.farm1": "cut",
+        "ch4.farm2": "heap",
+        "ch4.farm3": "sun",
+        "ch4.farm4": "bag"
+      },
+      "artText": {
+        "alt": "Kobir's note: Cut the pods. Ferment the beans in heaps. Dry them in the sun. Then bag them. That is the order.",
+        "t1": "Cut the pods. Ferment the",
+        "t2": "beans in heaps. Dry them",
+        "t3": "in the sun. Then bag",
+        "t4": "them. That is the order."
+      }
+    },
+    {
+      "id": "cutcard",
+      "hotspot": {
+        "x": 6.3,
+        "y": 48.5,
+        "w": 12.5,
+        "h": 22.4
+      },
+      "title": "Dadu's cut-test card",
+      "art": "cut-card",
+      "text": "Five beans cut in half, drawn by Dadu. A good bean is brown inside with open cracks. Purple means not fermented long enough. Grey and hard means not fermented at all. Mouldy or flat means it is empty or spoiled.",
+      "provides": {
+        "ch4.good_cut": "brown-open"
+      },
+      "artText": {
+        "alt": "Dadu's cut-test card with five cut beans: brown with open cracks is good, purple, grey and hard, mouldy, and flat are bad",
+        "title": "The cut test",
+        "l0": "brown, cracked",
+        "l1": "purple",
+        "l2": "grey, hard",
+        "l3": "mouldy",
+        "l4": "flat, empty",
+        "v0": "good",
+        "v1": "bad",
+        "v2": "bad",
+        "v3": "bad",
+        "v4": "bad",
+        "note": "keep only the brown ones!"
+      }
+    },
+    {
+      "id": "smellcard",
+      "hotspot": {
+        "x": 34.6,
+        "y": 46.3,
+        "w": 8.3,
+        "h": 14.9
+      },
+      "title": "Dadu's smell card",
+      "art": "smell-card",
+      "text": "\"Good: mild vinegar and fruit. Bad: smoky, because the beans were dried over a fire. Bad: ammonia, a sharp sting, because they were left to ferment too long.\"",
+      "provides": {
+        "ch4.good_smell": "mild vinegar and fruit"
+      },
+      "artText": {
+        "alt": "Dadu's smell card: good is mild vinegar and fruit, bad is smoky because it was dried over fire, bad is ammonia because it fermented too long",
+        "t1": "Good: mild vinegar and fruit.",
+        "t2": "Bad: smoky.",
+        "t3": "dried over a fire",
+        "t4": "Bad: ammonia, a sharp sting.",
+        "t5": "fermented too long"
+      }
+    },
+    {
+      "id": "scale",
+      "hotspot": {
+        "x": 75.4,
+        "y": 26.9,
+        "w": 10.4,
+        "h": 21.6
+      },
+      "title": "The old scale",
+      "art": "scale",
+      "text": "Dadu weighed every sack twice. \"Weigh it, don't guess,\" he said.",
+      "provides": {},
+      "artText": {
+        "alt": "An old brass scale"
+      }
+    },
+    {
+      "id": "gamchha",
+      "hotspot": {
+        "x": 86.5,
+        "y": 24.3,
+        "w": 8.3,
+        "h": 57.8
+      },
+      "title": "Kobir's gamchha",
+      "art": "gamchha",
+      "text": "A checked cotton towel, left on the hook last year. Kobir always wiped his forehead with it.",
+      "provides": {},
+      "artText": {
+        "alt": "A checked cotton towel hanging on a hook"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "farm",
+      "type": "order",
+      "title": "How beans are made",
+      "prompt": "Tap a farm step, then tap its blank in the notebook. Or drag it there.",
+      "say": "The page is stained again. Kobir's note should tell me the order on the farm.",
+      "params": {
+        "machines": [
+          {
+            "id": "bag",
+            "name": "Bag",
+            "does": "packs the dry beans into sacks",
+            "says": "Bagging. It comes last, once the beans are dry.",
+            "role": "bag"
+          },
+          {
+            "id": "sun",
+            "name": "Dry",
+            "does": "spreads the beans out in the sun",
+            "says": "Drying in the sun. It keeps the beans from going mouldy.",
+            "role": "sun"
+          },
+          {
+            "id": "cut",
+            "name": "Cut",
+            "does": "opens the pods",
+            "says": "Cutting the pods. It comes first.",
+            "role": "cut"
+          },
+          {
+            "id": "heap",
+            "name": "Ferment",
+            "does": "piles the beans up for days",
+            "says": "Fermenting. The beans sit in heaps for days, and the flavour builds.",
+            "role": "heap"
+          }
+        ],
+        "needs": [
+          "opens the pods to get the beans out",
+          "lets the flavour build, over days",
+          "dries the beans, after fermenting",
+          "packs the beans, once they are dry"
+        ],
+        "idleInfo": "Tap a farm step to hear what it does.",
+        "pickFirst": "Pick a farm step first, then tap the blank.",
+        "startLabel": "Check the sack",
+        "blankLabel": "Blank {n}"
+      },
+      "answer": {
+        "sequence": [
+          "cut",
+          "heap",
+          "sun",
+          "bag"
+        ],
+        "derive": [
+          "optionWith('role', ch4.farm1)",
+          "optionWith('role', ch4.farm2)",
+          "optionWith('role', ch4.farm3)",
+          "optionWith('role', ch4.farm4)"
+        ]
+      },
+      "feedback": {
+        "placed": [
+          "Cut the pods. Everything starts here.",
+          "Ferment in heaps. This is where the flavour comes from.",
+          "Dry in the sun. Now the beans can be stored.",
+          "Bag the beans. Ready for the workshop."
+        ],
+        "wrong": "The {name} step {does}. Line {line} needs something that {need}.",
+        "complete": "That is how every sack starts. Now to check the beans in this one."
+      },
+      "hints": [
+        "Kobir's note in the Workshop lists the steps in order.",
+        "Cut the pods, ferment in heaps, dry in the sun, then bag the beans."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "farmnote"
+      ]
+    },
+    {
+      "id": "cut",
+      "type": "spot-defect",
+      "line": "cut",
+      "title": "Line 5: the cut test",
+      "prompt": "Each bean is cut in half. Tap the bad ones before they slide off the tray. Tap a bean to stop it. Missed beans come round again.",
+      "say": "Brown with open cracks is good. Dadu's card shows the rest.",
+      "params": {
+        "types": [
+          {
+            "id": "brown-open",
+            "label": "Brown, open cracks",
+            "good": true
+          },
+          {
+            "id": "purple",
+            "label": "Purple inside",
+            "why": "Purple means it was not fermented long enough. It will taste sharp and bitter."
+          },
+          {
+            "id": "slaty",
+            "label": "Grey and hard",
+            "why": "Grey and hard, like slate, means it was never fermented. It will taste of nothing."
+          },
+          {
+            "id": "mouldy",
+            "label": "Mouldy",
+            "why": "Mould would spoil the whole batch."
+          },
+          {
+            "id": "flat",
+            "label": "Flat and empty",
+            "why": "Flat beans have no nib inside. There is nothing to use."
+          }
+        ],
+        "items": [
+          {
+            "id": "b1",
+            "type": "brown-open"
+          },
+          {
+            "id": "b2",
+            "type": "purple"
+          },
+          {
+            "id": "b3",
+            "type": "brown-open"
+          },
+          {
+            "id": "b4",
+            "type": "slaty"
+          },
+          {
+            "id": "b5",
+            "type": "brown-open"
+          },
+          {
+            "id": "b6",
+            "type": "brown-open"
+          },
+          {
+            "id": "b7",
+            "type": "mouldy"
+          },
+          {
+            "id": "b8",
+            "type": "brown-open"
+          },
+          {
+            "id": "b9",
+            "type": "purple"
+          },
+          {
+            "id": "b10",
+            "type": "brown-open"
+          },
+          {
+            "id": "b11",
+            "type": "flat"
+          },
+          {
+            "id": "b12",
+            "type": "brown-open"
+          }
+        ],
+        "goLabel": "Done checking",
+        "goodTap": "That one is good. Keep it.",
+        "stillBad": "Some bad beans are still on the tray. They will come round again.",
+        "staticNote": "With reduced motion on, the beans stay in a grid. Tap the bad ones.",
+        "speed": 72
+      },
+      "answer": {
+        "defects": [
+          "b2",
+          "b4",
+          "b7",
+          "b9",
+          "b11"
+        ],
+        "derive": "defectsOf(ch4.good_cut)"
+      },
+      "feedback": {
+        "correct": "Five bad beans out. The rest are brown and cracked, just as Dadu's card says."
+      },
+      "hints": [
+        "Dadu's cut-test card in the Workshop shows what a good bean looks like.",
+        "Keep only the brown beans with open cracks. Take out the purple, the grey and hard, the mouldy and the flat ones."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "cutcard"
+      ]
+    },
+    {
+      "id": "smell1",
+      "type": "compare-two",
+      "line": "smell1",
+      "title": "Line 6: smell the sacks",
+      "prompt": "Smell both sacks. Which one is good?",
+      "say": "Two sacks. Dadu's smell card says what a good sack smells like.",
+      "params": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Sack A",
+            "color": "#b79a6a",
+            "tag": "mild vinegar and fruit",
+            "sense": "A mild sour smell, like vinegar, with something fruity under it.",
+            "no": ""
+          },
+          {
+            "id": "b",
+            "label": "Sack B",
+            "color": "#6b5a4a",
+            "tag": "smoky",
+            "sense": "Smoky, like a wood fire.",
+            "no": "That smoke means the beans were dried over a fire. The smell will end up in the chocolate."
+          }
+        ],
+        "optionName": "{label}",
+        "idleSense": "Tap a sack to smell it.",
+        "sensePrefix": "You lean in. ",
+        "goLabel": "Take this sack"
+      },
+      "answer": {
+        "choice": "a",
+        "derive": "optionWith('tag', ch4.good_smell)"
+      },
+      "feedback": {
+        "correct": "Mild vinegar and fruit. That is how a good sack smells."
+      },
+      "hints": [
+        "Dadu's smell card says what a good sack smells like. Look in the Workshop.",
+        "A good sack smells of mild vinegar and fruit, so it is Sack A."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "smellcard"
+      ]
+    },
+    {
+      "id": "smell2",
+      "type": "compare-two",
+      "line": "smell2",
+      "title": "Line 7: one more pair",
+      "prompt": "Two more sacks. Smell them both and pick the good one.",
+      "say": "Again. Smoke is bad, and so is a sharp sting.",
+      "params": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Sack C",
+            "color": "#6b8a5a",
+            "tag": "ammonia",
+            "sense": "A sharp sting in your nose, like cleaning fluid.",
+            "no": "That sting is ammonia. The beans were left to ferment too long, and they have gone bad."
+          },
+          {
+            "id": "b",
+            "label": "Sack D",
+            "color": "#8a6a3a",
+            "tag": "mild vinegar and fruit",
+            "sense": "A mild sour smell, like vinegar, with something fruity under it.",
+            "no": ""
+          }
+        ],
+        "optionName": "{label}",
+        "idleSense": "Tap a sack to smell it.",
+        "sensePrefix": "You lean in. ",
+        "goLabel": "Take this sack"
+      },
+      "answer": {
+        "choice": "b",
+        "derive": "optionWith('tag', ch4.good_smell)"
+      },
+      "feedback": {
+        "correct": "Sack D. Kobir keeps his beans well."
+      },
+      "hints": [
+        "Dadu's smell card also says what the bad smells mean. Check it in the Workshop.",
+        "Take the sack that smells of mild vinegar and fruit, which is Sack D."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "smellcard"
+      ]
+    }
+  ],
+  "reveal": {
+    "art": "bar-beans",
+    "talk": [
+      [
+        "Kobir",
+        "\"Your grandfather would have said the same: good beans make good chocolate.\""
+      ],
+      [
+        "Laila",
+        "I will buy your beans every year, Kobir Bhai."
+      ],
+      [
+        "Kobir",
+        "Then I will bring the best sack first, apa."
+      ]
+    ],
+    "recipeTitle": "Dadu's bean page, rebuilt:",
+    "recipe": [
+      "Cut the pods, ferment in heaps, dry in the sun, bag the beans",
+      "Cut a handful open: keep the brown, cracked beans",
+      "Take out purple, grey and hard, mouldy and flat beans",
+      "A good sack smells of mild vinegar and fruit, not smoke or ammonia"
+    ],
+    "realFact": "In real life, the flavour of chocolate is set long before the workshop, by how the beans are fermented and dried on the farm.",
+    "next": "Chapter 5: Wedding Boxes.",
+    "again": "Play chapter 4 again",
+    "artText": {
+      "alt": "A sack of good brown cacao beans",
+      "t1": "Kobir"
+    }
+  }
+}

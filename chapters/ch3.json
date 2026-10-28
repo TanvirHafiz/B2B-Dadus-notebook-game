@@ -1,0 +1,507 @@
+{
+  "id": "ch3",
+  "title": "Monsoon Leak",
+  "eyebrow": "Bean-to-Bar · Chapter 3",
+  "gameTitle": "Dadu's Notebook",
+  "opening": "Rain. The roof is dripping onto the shelves. I have to save what I can.",
+  "cast": {
+    "Laila": {
+      "name": "Laila",
+      "portrait": "laila"
+    },
+    "Rafiq": {
+      "name": "Rafiq Bhai",
+      "portrait": "rafiq",
+      "side": "right"
+    },
+    "Mishti": {
+      "name": "Mishti",
+      "portrait": "mishti",
+      "side": "right"
+    },
+    "Hint": {
+      "name": "Dadu's note",
+      "portrait": "dadu"
+    }
+  },
+  "intro": [
+    {
+      "art": "shutter-closed",
+      "h": "Monsoon.",
+      "p": "Three days of rain. Overnight, a corner of the workshop roof gave way."
+    },
+    {
+      "art": "shutter-open",
+      "cast": [
+        "Laila",
+        "Rafiq"
+      ],
+      "talk": [
+        [
+          "Rafiq",
+          "Laila beta! Your roof is dripping on the lane. Is everything all right in there?"
+        ],
+        [
+          "Laila",
+          "Not really. Water got onto the shelves and the whole batch on the bench has gone stiff and grainy."
+        ],
+        [
+          "Rafiq",
+          "Stiff? Did you add water?"
+        ],
+        [
+          "Laila",
+          "No. The roof did. A few drops were enough to ruin it."
+        ],
+        [
+          "Rafiq",
+          "Then first, move everything else out of the wet. Dadu must have labelled his shelves."
+        ],
+        [
+          "Laila",
+          "He did. I will read the labels before I move anything."
+        ]
+      ],
+      "button": "Open the notebook"
+    }
+  ],
+  "notebook": {
+    "bn": "দাদুর খাতা",
+    "title": "The monsoon page",
+    "lines": [
+      {
+        "id": "sort",
+        "text": "Before the rains, put every supply in its place. [[torn:…read the label on each shelf…]]"
+      },
+      {
+        "id": "rescue",
+        "text": "If a batch seizes, do not fight it. [[q:Seized chocolate never becomes a bar again.]]",
+        "note": "make a drink"
+      },
+      {
+        "id": "milk",
+        "text": "Stir in hot milk. [[blur:How much?]] Too little stays gritty. Too much turns to water.",
+        "note": "about as much milk as chocolate"
+      },
+      {
+        "id": "whisk",
+        "text": "Whisk it till it is smooth and glossy, then pour it for the neighbours."
+      }
+    ]
+  },
+  "workshop": {
+    "scene": "assets/art/scene-ch3.webp",
+    "sceneAlt": "Dadu's workshop in the monsoon, with a leak in the roof. Tap the glowing objects to remember.",
+    "hintLine": "Tap the glowing spots. Dadu left clues all over the workshop.",
+    "memoEyebrow": "Laila remembers"
+  },
+  "clues": [
+    {
+      "id": "dry",
+      "hotspot": {
+        "x": 2.1,
+        "y": 9.3,
+        "w": 16.7,
+        "h": 42.9
+      },
+      "title": "The dry shelf label",
+      "art": "label-dry",
+      "text": "Dadu's handwriting: \"Dry shelf. For anything that soaks up water.\"",
+      "provides": {
+        "ch3.dry_rule": "soaks up water"
+      },
+      "artText": {
+        "alt": "A shelf label in Dadu's handwriting: Dry shelf. For anything that soaks up water.",
+        "t1": "Dry shelf.",
+        "t2": "For anything that",
+        "t3": "soaks up water."
+      }
+    },
+    {
+      "id": "cool",
+      "hotspot": {
+        "x": 22.5,
+        "y": 18.7,
+        "w": 14.6,
+        "h": 16.8
+      },
+      "title": "The cool shelf label",
+      "art": "label-cool",
+      "text": "\"Cool shelf. For anything that melts.\"",
+      "provides": {
+        "ch3.cool_rule": "melts"
+      },
+      "artText": {
+        "alt": "A shelf label in Dadu's handwriting: Cool shelf. For anything that melts.",
+        "t1": "Cool shelf.",
+        "t2": "For anything",
+        "t3": "that melts."
+      }
+    },
+    {
+      "id": "jar",
+      "hotspot": {
+        "x": 41.3,
+        "y": 39.2,
+        "w": 12.1,
+        "h": 35.4
+      },
+      "title": "The sealed jar label",
+      "art": "label-jar",
+      "text": "\"Sealed jar. For anything that takes on smells.\"",
+      "provides": {
+        "ch3.jar_rule": "takes on smells"
+      },
+      "artText": {
+        "alt": "A shelf label in Dadu's handwriting: Sealed jar. For anything that takes on smells.",
+        "t1": "Sealed jar.",
+        "t2": "For anything that",
+        "t3": "takes on smells."
+      }
+    },
+    {
+      "id": "seize",
+      "hotspot": {
+        "x": 60,
+        "y": 42.9,
+        "w": 10.8,
+        "h": 15.7
+      },
+      "title": "Dadu's note on seizing",
+      "art": "note-seize",
+      "text": "\"A few drops of water and chocolate seizes: stiff, grainy, finished as a bar. Do not fight it. Turn it into a drink.\"",
+      "provides": {
+        "ch3.seized_use": "a drink"
+      },
+      "artText": {
+        "alt": "Dadu's note on seizing: A few drops of water and chocolate seizes: stiff, grainy, no more bars. Make it a drink.",
+        "t1": "A few drops of water and",
+        "t2": "chocolate seizes: stiff,",
+        "t3": "grainy, no more bars.",
+        "t4": "Make it a drink."
+      }
+    },
+    {
+      "id": "milknote",
+      "hotspot": {
+        "x": 54.6,
+        "y": 21.6,
+        "w": 8.3,
+        "h": 18.7
+      },
+      "title": "Dadu's drinking chocolate note",
+      "art": "note-milk-drink",
+      "text": "\"Hot milk, about as much as the chocolate. Less stays gritty, more makes it thin.\"",
+      "provides": {
+        "ch3.milk_amount": "about as much as the chocolate"
+      },
+      "artText": {
+        "alt": "Dadu's drinking chocolate note: Hot milk, about as much as the chocolate. Less stays gritty, more makes it thin.",
+        "t1": "Hot milk, about as much",
+        "t2": "as the chocolate.",
+        "t3": "Less stays gritty,",
+        "t4": "more makes it thin."
+      }
+    },
+    {
+      "id": "bucket",
+      "hotspot": {
+        "x": 75.4,
+        "y": 70.9,
+        "w": 10.4,
+        "h": 22.4
+      },
+      "title": "The bucket under the leak",
+      "art": "bucket",
+      "text": "It filled up twice in the night. The sound of the drips kept Laila awake.",
+      "provides": {},
+      "artText": {
+        "alt": "A bucket under the roof leak, half full of rainwater"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "sort",
+      "type": "sort-bins",
+      "line": "sort",
+      "title": "Line 1: save the supplies",
+      "prompt": "Tap a supply, then tap the shelf it belongs on. Or drag it there. The labels on each shelf tell you the rule.",
+      "say": "Six supplies and three shelves. Each shelf has a label in Dadu's handwriting.",
+      "params": {
+        "bins": [
+          {
+            "id": "dry",
+            "name": "Dry shelf",
+            "rule": "soaks up water",
+            "ruleText": "soaks up water"
+          },
+          {
+            "id": "cool",
+            "name": "Cool shelf",
+            "rule": "melts",
+            "ruleText": "melts"
+          },
+          {
+            "id": "jar",
+            "name": "Sealed jar",
+            "rule": "takes on smells",
+            "ruleText": "takes on smells"
+          }
+        ],
+        "items": [
+          {
+            "id": "sugar",
+            "name": "Sugar",
+            "trait": "soaks up water",
+            "says": "Sugar. It drinks water from the air, and clumps."
+          },
+          {
+            "id": "milkpowder",
+            "name": "Milk powder",
+            "trait": "soaks up water",
+            "says": "Milk powder. It goes hard and lumpy if it gets damp."
+          },
+          {
+            "id": "bars",
+            "name": "Finished bars",
+            "trait": "melts",
+            "says": "Finished bars. They go soft and dull if they get warm."
+          },
+          {
+            "id": "butter",
+            "name": "Cocoa butter",
+            "trait": "melts",
+            "says": "Cocoa butter. It melts at a gentle warmth."
+          },
+          {
+            "id": "nibs",
+            "name": "Roasted nibs",
+            "trait": "takes on smells",
+            "says": "Roasted nibs. They pick up any smell nearby."
+          },
+          {
+            "id": "cardamom",
+            "name": "Cardamom",
+            "trait": "takes on smells",
+            "says": "Cardamom. A strong smell that can leak into other things."
+          }
+        ],
+        "idleInfo": "Tap a supply to find out about it.",
+        "pickFirst": "Pick a supply first, then tap a shelf.",
+        "doneLabel": "Everything is safe",
+        "wrongFeedback": "{says} The {bin} is for anything that {ruleText}."
+      },
+      "answer": {
+        "bins": {
+          "dry": [
+            "sugar",
+            "milkpowder"
+          ],
+          "cool": [
+            "bars",
+            "butter"
+          ],
+          "jar": [
+            "nibs",
+            "cardamom"
+          ]
+        },
+        "derive": "binWith('rule', item.trait)"
+      },
+      "feedback": {
+        "placed": "Safe. Next one.",
+        "complete": "Everything is in its place. Now the batch on the bench."
+      },
+      "hints": [
+        "Read the label on each shelf in the Workshop. Each one says what it is for.",
+        "Sugar and milk powder soak up water, so they go on the dry shelf. Bars and cocoa butter melt, so they go on the cool shelf. Roasted nibs and cardamom take on smells, so they go in the sealed jar."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "dry",
+        "cool",
+        "jar"
+      ]
+    },
+    {
+      "id": "rescue",
+      "type": "pick-by-sense",
+      "line": "rescue",
+      "title": "Line 2: the seized batch",
+      "prompt": "The batch on the bench is stiff and grainy. Pick what to do with it.",
+      "say": "I cannot make a bar out of this. Dadu wrote something about seizing.",
+      "params": {
+        "options": [
+          {
+            "id": "water",
+            "color": "#7a4526",
+            "tag": "worse",
+            "sense": "Add a splash of cold water to loosen it. It looks tempting.",
+            "no": "Cold water only makes it stiffer. A few drops is how it seized in the first place."
+          },
+          {
+            "id": "temper",
+            "color": "#7a4526",
+            "tag": "a bar again",
+            "sense": "Melt it and temper it again, the way you would a dark bar.",
+            "no": "It will not come back. It melts into a grainy paste and never sets glossy."
+          },
+          {
+            "id": "mould",
+            "color": "#7a4526",
+            "tag": "a bar",
+            "sense": "Press it into the moulds as it is.",
+            "no": "You would get a crumbly, dull bar that nobody wants. Seized chocolate cannot become a bar again."
+          },
+          {
+            "id": "milk",
+            "color": "#7a4526",
+            "tag": "a drink",
+            "sense": "Stir in hot milk and make it a drink.",
+            "no": ""
+          }
+        ],
+        "labels": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "optionName": "Option {label}",
+        "idleSense": "Tap an option to read it.",
+        "sensePrefix": "",
+        "goLabel": "Do this",
+        "shuffle": true
+      },
+      "answer": {
+        "choice": "milk",
+        "derive": "optionWith('tag', ch3.seized_use)"
+      },
+      "feedback": {
+        "correct": "Hot milk. If it cannot be a bar, it can still be something warm for the neighbours."
+      },
+      "hints": [
+        "Dadu left a note about what to do when chocolate seizes. Look in the Workshop.",
+        "Seized chocolate cannot become a bar, so stir in hot milk and make a drink."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "seize"
+      ]
+    },
+    {
+      "id": "milk",
+      "type": "pick-by-sense",
+      "line": "milk",
+      "title": "Line 3: how much milk?",
+      "prompt": "Dadu's page is smudged. How much hot milk should go in?",
+      "say": "Too little and it stays gritty. Too much and it turns to water.",
+      "params": {
+        "options": [
+          {
+            "id": "splash",
+            "color": "#7a4526",
+            "tag": "just a splash",
+            "sense": "A splash of hot milk.",
+            "no": "That is still a stiff paste. It needs more milk to turn into a drink."
+          },
+          {
+            "id": "equal",
+            "color": "#7a4526",
+            "tag": "about as much as the chocolate",
+            "sense": "About as much hot milk as there is chocolate.",
+            "no": ""
+          },
+          {
+            "id": "pot",
+            "color": "#7a4526",
+            "tag": "far more than the chocolate",
+            "sense": "The whole pot of hot milk.",
+            "no": "That is thin and watery. The chocolate taste is lost."
+          }
+        ],
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "optionName": "Pour {label}",
+        "idleSense": "Tap a pour to picture it.",
+        "sensePrefix": "",
+        "goLabel": "Pour it in",
+        "shuffle": true
+      },
+      "answer": {
+        "choice": "equal",
+        "derive": "optionWith('tag', ch3.milk_amount)"
+      },
+      "feedback": {
+        "correct": "Smooth and rich. It tastes like the chocolate, only warm."
+      },
+      "hints": [
+        "Dadu's drinking chocolate note says how much. Find it in the Workshop.",
+        "About as much hot milk as there is chocolate."
+      ],
+      "nudgeWorkshop": true,
+      "requiresClues": [
+        "milknote"
+      ]
+    },
+    {
+      "id": "whisk",
+      "type": "tap-meter",
+      "line": "whisk",
+      "title": "Last line: whisk",
+      "prompt": "Whisk it till it is smooth. Tap the whisk ten times.",
+      "say": "Whisk it till there are no lumps left.",
+      "params": {
+        "variant": "crank",
+        "label": "Tap to whisk",
+        "effect": "bubbles"
+      },
+      "answer": {
+        "count": 10,
+        "derive": "ui"
+      },
+      "feedback": {
+        "correct": "Smooth and glossy. Time to pour it for the neighbours."
+      },
+      "hints": [
+        "Just keep tapping the whisk."
+      ],
+      "requiresClues": []
+    }
+  ],
+  "reveal": {
+    "art": "bar-drink",
+    "talk": [
+      [
+        "Rafiq",
+        "\"Hot chocolate in the rain. Dadu would be proud of you, beta.\""
+      ],
+      [
+        "Mishti",
+        "It is warm all the way down!"
+      ],
+      [
+        "Laila",
+        "A ruined batch, and I still made something good from it."
+      ]
+    ],
+    "recipeTitle": "Dadu's monsoon page, rebuilt:",
+    "recipe": [
+      "Dry things on the dry shelf, melting things on the cool shelf",
+      "Smelly things in the sealed jar",
+      "Seized chocolate cannot be a bar",
+      "Stir in hot milk, about as much as the chocolate",
+      "Whisk till smooth and pour for the neighbours"
+    ],
+    "realFact": "In real life, a few drops of water can make melted chocolate seize. Stir in a lot of liquid and it turns into a sauce or a drink instead.",
+    "next": "Chapter 4: Bean Delivery.",
+    "again": "Play chapter 3 again",
+    "artText": {
+      "alt": "A steaming mug of hot chocolate"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dadu's Notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Hind+Siliguri:wght@400;500;600;700&family=Atma:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="select" hidden></main>
+<div class="stage">
+<div class="app" id="app" data-tab="note">
+  <header class="top">
+    <div class="brandRow"><span id="sponsorSlot"></span><div><div class="eyebrow" id="eyebrow"></div><h1 id="gameTitle">Dadu's Notebook</h1></div></div>
+    <div class="topBtns"><button class="navbtn" id="langBtn" type="button" lang="bn"></button><button class="navbtn" id="muteBtn" type="button"></button><button class="navbtn" id="chaptersBtn" type="button" data-i18n="nav.chapters">Chapters</button><button class="navbtn" id="shelfBtn" type="button" data-i18n="nav.shelf">Memory shelf</button><button class="hintbtn" id="hintBtn" type="button" aria-keyshortcuts="H"><span data-i18n="nav.hint">Hint</span> <kbd>H</kbd></button></div>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Views" data-i18n-aria="nav.views">
+    <button id="tabNote" role="tab" aria-selected="true" aria-controls="colL" type="button" data-i18n="nav.notebook">Notebook</button>
+    <button id="tabShop" role="tab" aria-selected="false" aria-controls="shopBox" type="button"><span data-i18n="nav.workshop">Workshop</span> <i id="clueCount">0/0</i></button>
+  </nav>
+  <div class="cols">
+    <div class="col colL" id="colL">
+      <div class="page noteOnly">
+        <div class="stain"></div>
+        <div class="pt"><span class="bn" id="nbBn"></span><span class="en" id="nbTitle"></span></div>
+        <ol class="lines" id="lines"></ol>
+      </div>
+      <section class="shopBox shopOnly" id="shopBox" aria-label="Workshop" data-i18n-aria="nav.workshop">
+        <div class="shopHead"><h2 data-i18n="nav.workshop">Workshop</h2><span class="count" id="clueCount2">0/0</span></div>
+        <div class="scene" id="scene"></div>
+        <p class="hintline" id="hintLine"></p>
+      </section>
+    </div>
+    <div class="col colR">
+      <div class="say" id="say"><div class="port" id="port"></div><div class="bubble"><div class="name" id="sayName">Laila</div><p id="sayTxt" aria-hidden="true"></p><span class="sr" id="saySr" aria-live="polite"></span></div></div>
+      <div class="panel noteOnly" id="panel"></div>
+      <div id="memo" class="shopOnly"></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="overlay" id="overlay" hidden></div>
+<div class="overlay" id="shelfOv" role="dialog" aria-modal="true" aria-label="Memory shelf" data-i18n-aria="nav.shelf" hidden></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
