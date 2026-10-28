@@ -14,7 +14,7 @@
 <div class="app" id="app" data-tab="note">
   <header class="top">
     <div class="brandRow"><span id="sponsorSlot"></span><div><div class="eyebrow" id="eyebrow"></div><h1 id="gameTitle">Dadu's Notebook</h1></div></div>
-    <div class="topBtns"><button class="navbtn" id="langBtn" type="button" lang="bn"></button><button class="navbtn" id="muteBtn" type="button"></button><button class="navbtn" id="chaptersBtn" type="button" data-i18n="nav.chapters">Chapters</button><button class="navbtn" id="shelfBtn" type="button" data-i18n="nav.shelf">Memory shelf</button><button class="hintbtn" id="hintBtn" type="button" aria-keyshortcuts="H"><span data-i18n="nav.hint">Hint</span> <kbd>H</kbd></button></div>
+    <div class="topBtns"><button class="navbtn" id="langBtn" type="button" lang="bn"></button><button class="navbtn" id="chaptersBtn" type="button" data-i18n="nav.chapters">Chapters</button><button class="navbtn" id="shelfBtn" type="button" data-i18n="nav.shelf">Memory shelf</button><button class="hintbtn" id="hintBtn" type="button" aria-keyshortcuts="H"><span data-i18n="nav.hint">Hint</span> <kbd>H</kbd></button></div>
   </header>
   <nav class="tabs" role="tablist" aria-label="Views" data-i18n-aria="nav.views">
     <button id="tabNote" role="tab" aria-selected="true" aria-controls="colL" type="button" data-i18n="nav.notebook">Notebook</button>
@@ -43,6 +43,7 @@
 </div>
 <div class="overlay" id="overlay" hidden></div>
 <div class="overlay" id="shelfOv" role="dialog" aria-modal="true" aria-label="Memory shelf" data-i18n-aria="nav.shelf" hidden></div>
+<button id="muteBtn" class="muteBtn" type="button"></button>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

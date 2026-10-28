@@ -1,7 +1,7 @@
 // Offline support. tools/build.mjs replaces the two placeholders below in dist/sw.js; the source copy does nothing, so local play and tests are never cached.
 // First visit: the engine, Chapter 1 and the music are stored under this build's version. Later chapters and their art are stored the first time they are opened,
 // in a separate cache that an update does not delete (chapter text is fetched network-first, so it is still fresh when online).
-const VERSION = "dadus-99eabb63eb";
+const VERSION = "dadus-d7673249e6";
 const PRECACHE = "[\"./\",\"index.html\",\"css/style.css\",\"js/art.js\",\"js/audio.js\",\"js/chapters.js\",\"js/i18n.js\",\"js/main.js\",\"js/select.js\",\"js/shelf.js\",\"js/sponsor.js\",\"js/steps.js\",\"js/store.js\",\"js/zoom.js\",\"i18n/bn.json\",\"i18n/en.json\",\"chapters/index.bn.json\",\"chapters/index.json\",\"chapters/ch1.bn.json\",\"chapters/ch1.json\",\"assets/art/dadu.webp\",\"assets/art/jamal.webp\",\"assets/art/kobir.webp\",\"assets/art/laila.webp\",\"assets/art/mishti.webp\",\"assets/art/nazma.webp\",\"assets/art/rafiq.webp\",\"assets/art/scene-ch1.webp\",\"assets/art/shumi.webp\",\"assets/art/shutter-ch1.webp\",\"assets/art/wrap-dark.webp\",\"assets/art/wrap-dark90.webp\",\"assets/art/wrap-milk.webp\",\"assets/audio/crank.ogg\",\"assets/audio/no.ogg\",\"assets/audio/ok.ogg\",\"assets/audio/page.ogg\",\"assets/audio/pour.ogg\",\"assets/audio/rattle.ogg\",\"assets/audio/shutter.ogg\",\"assets/audio/tap.ogg\",\"assets/audio/tin.ogg\",\"assets/audio/win.ogg\",\"assets/products/dark.webp\",\"assets/products/dark90.webp\",\"assets/products/milk.webp\",\"assets/sponsor-logo.webp\",\"assets/audio/music.ogg\"]";
 const RUNTIME = 'dadus-runtime';
 

@@ -43,7 +43,7 @@ function play(name, gain = 1) {
   if (SYNTH[name]) SYNTH[name]();
 }
 
-export const sfx = Object.fromEntries(Object.keys(FILES).map(k => [k, () => play(k, k === 'tap' ? .6 : 1)]));
+export const sfx = Object.fromEntries(Object.keys(FILES).map(k => [k, () => play(k, k === 'tap' ? .45 : .7)]));
 export const isMuted = () => muted;
 export function setMuted(m) {
   muted = !!m; try { localStorage.setItem(KEY, muted ? '1' : '0'); } catch (e) { /* ignore */ }
@@ -56,8 +56,18 @@ export function startAudio() {
   Object.keys(FILES).forEach(load);
   if (!MUSIC) return;
   try {
-    musicEl = new Audio(MUSIC); musicEl.loop = true; musicEl.volume = .3; musicEl.preload = 'auto';
+    musicEl = new Audio(MUSIC); musicEl.loop = true; musicEl.volume = .4; musicEl.preload = 'auto';
     musicEl.addEventListener('error', () => { musicEl = null; });
     if (!muted) musicEl.play().catch(() => {});
   } catch (e) { musicEl = null; }
 }
+
+// Silence when the page is hidden, backgrounded or closed (a tab in the background, a closed pop-up): pause the music and suspend the effects,
+// and pick the music up again when the page is shown, unless it was muted.
+function hush(on) {
+  if (on) { if (musicEl) musicEl.pause(); if (ac && ac.state === 'running') ac.suspend().catch(() => {}); }
+  else { if (ac && ac.state === 'suspended' && wanted) ac.resume().catch(() => {}); if (musicEl && wanted && !muted) musicEl.play().catch(() => {}); }
+}
+document.addEventListener('visibilitychange', () => hush(document.hidden));
+addEventListener('pagehide', () => hush(true));
+addEventListener('pageshow', () => hush(document.hidden));

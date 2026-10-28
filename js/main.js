@@ -21,7 +21,8 @@ const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 ['pointerdown', 'keydown'].forEach(ev => addEventListener(ev, startAudio, { once: true, capture: true }));
 function muteButton() {
   const b = $('#muteBtn'); if (!b) return;
-  const show = () => { b.textContent = t(isMuted() ? 'nav.soundOff' : 'nav.soundOn'); };
+  const ICON = { on: '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>', off: '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9l6 6M22 9l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' };
+  const show = () => { const label = t(isMuted() ? 'nav.soundOff' : 'nav.soundOn'); b.innerHTML = ICON[isMuted() ? 'off' : 'on']; b.setAttribute('aria-label', label); b.title = label; };
   b.addEventListener('click', () => { setMuted(!isMuted()); show(); }); show();
 }
 
