@@ -378,3 +378,8 @@ b.stars{font-family:var(--ui)}
 .nwPreview svg{width:min(100%,220px);height:auto;border-radius:6px}
 .barart.wrapperCard{display:flex;justify-content:center}
 .barart.wrapperCard svg{width:min(100%,220px)}
+
+/* always-visible sound button: above the intro overlay, clear of the content (the page keeps room under it) */
+.muteBtn{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:60;width:44px;height:44px;border-radius:50%;border:1px solid var(--on-bg-2);background:var(--bg);color:var(--on-bg);display:grid;place-items:center;cursor:pointer;padding:0}
+.muteBtn:hover{background:#4d2d1e;border-color:var(--cream-ink)}
+body{padding-bottom:max(64px,calc(env(safe-area-inset-bottom,0px) + 56px))}

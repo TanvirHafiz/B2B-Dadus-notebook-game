@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "node tools/serve.mjs",
     "lint": "node tools/lint.mjs",
-    "test": "node tools/lint.mjs && node tests/unit.mjs && node tests/play.mjs && node tests/play.mjs 1280x720 bn && node tests/play2.mjs && node tests/play2.mjs 1280x720 bn && node tests/play3.mjs && node tests/play3.mjs 1280x720 bn && node tests/play4.mjs && node tests/play4.mjs 1280x720 bn && node tests/play5.mjs && node tests/play5.mjs 1280x720 bn && node tests/play6.mjs && node tests/play6.mjs 1280x720 bn && node tests/play7.mjs && node tests/play7.mjs 1280x720 bn && node tests/play8.mjs && node tests/play8.mjs 1280x720 bn && node tests/progress.mjs && node tests/lang.mjs && node tests/sponsor.mjs && node tests/a11y.mjs && node tools/build.mjs && node tests/offline.mjs",
+    "test": "node tools/lint.mjs && node tests/unit.mjs && node tests/play.mjs && node tests/play.mjs 1280x720 bn && node tests/play2.mjs && node tests/play2.mjs 1280x720 bn && node tests/play3.mjs && node tests/play3.mjs 1280x720 bn && node tests/play4.mjs && node tests/play4.mjs 1280x720 bn && node tests/play5.mjs && node tests/play5.mjs 1280x720 bn && node tests/play6.mjs && node tests/play6.mjs 1280x720 bn && node tests/play7.mjs && node tests/play7.mjs 1280x720 bn && node tests/play8.mjs && node tests/play8.mjs 1280x720 bn && node tests/progress.mjs && node tests/lang.mjs && node tests/sponsor.mjs && node tests/audio.mjs && node tests/a11y.mjs && node tools/build.mjs && node tests/offline.mjs",
     "shots": "node tests/shots.mjs",
     "shots:bn": "node tests/shotsbn.mjs && node tests/shots56.mjs bn && node tests/shots78.mjs bn && node tests/shotsbn-clues.mjs",
     "build": "node tools/build.mjs"
